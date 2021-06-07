@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Add modal -->
+        <div class="modal fade" id="add-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 400px">
+                <div class="modal-content">
+                    <div class="modal-header" >
+                        <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="images/usuario.png" style="max-width: 50px; max-height: 50px"> </div>
+                        <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
+                    </div>
+                    <form id="formulario" >
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" ></div>
+                                <span id="text-login-msg">Registrar Usuario</span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="cedula">Cedula</label>
+                                <input type="text" class="form-control" name="cedula" id="cedula" placeholder="Cedula">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="contraseña">Contraseña</label>
+                                <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña">
+                            </div>                
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div>
+                                <input type="button" id="registrarse" class="btn btn-primary btn-lg btn-block" value="Registrarse">
+                            </div>
+                        </div>
+                    </form>                 
+                </div>         
+            </div>
+            <div id="addErrorDiv" style="width:30%; margin: auto;"></div>              
+        </div>
+    </body>
+</html>
