@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Cine/css/bootstrap.min.css">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+var menu = `
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Home</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,9 +13,6 @@ and open the template in the editor.
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Register</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
                 </ul>
                 <form class="d-flex">
                   <input class="form-control me-2" type="search" placeholder="Search Movie" aria-label="Search">
@@ -35,6 +20,12 @@ and open the template in the editor.
                 </form>
               </div>
             </div>
-          </nav>
-    </body>
-</html>
+        </nav>
+`;
+
+function loadMenu(){
+    console.log("Load Menu functioning....? lol ");
+    $('body').prepend(menu); 
+  }
+  
+$(loadMenu);  
