@@ -12,4 +12,32 @@ package cine.logic;
 public class Sala {
     int id;
     String numeroSala;
+
+    public Sala(int id, String numeroSala) {
+        this.id = id;
+        this.numeroSala = numeroSala;
+    }
+    
+    public Sala() {
+        this.id = 0;
+        this.numeroSala = "";
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNumeroSala() {
+        return numeroSala;
+    }
+
+    public void setNumeroSala(String numeroSala) {
+        this.numeroSala = numeroSala;
+    }
+    
+    
 }

@@ -24,6 +24,14 @@ public class Proyeccion {
         this.sala = sala;
     }
     
+    public Proyeccion() {
+        this.id = 0;
+        this.fecha = "";
+        this.hora = "";
+        this.pelicula = new Pelicula();
+        this.sala = new Sala();
+    }
+    
     public int getId() {
         return id;
     }

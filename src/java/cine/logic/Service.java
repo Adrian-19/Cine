@@ -5,10 +5,31 @@
  */
 package cine.logic;
 
+import cine.data.ProyeccionDao;
+import java.util.List;
+
 /**
  *
  * @author ESCINF
  */
 public class Service {
+    private static Service theInstance;
+
+    public static Service instance() {
+        if (theInstance == null) {
+            theInstance = new Service();
+        }
+        return theInstance;
+    }
     
-}
+    private ProyeccionDao proyeccionDao;
+    
+    public Service(){
+        proyeccionDao = new ProyeccionDao();
+    }
+    
+    // ------------ PROYECCIONES -------------
+    public List<Proyeccion> getListaProyecciones(){
+        return proyeccionDao.findAll();
+    }
+ }

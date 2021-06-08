@@ -22,6 +22,13 @@ public class Pelicula {
         this.estado = estado;
     }
     
+    public Pelicula() {
+        this.id = 0;
+        this.precio = 0;
+        this.nombre = "";
+        this.estado = "";
+    }
+    
     public int getId() {
         return id;
     }

@@ -24,7 +24,6 @@ var menu = `
 `;
 
 function loadMenu(){
-    console.log("Load Menu functioning....? lol ");
     $('body').prepend(menu); 
   }
   

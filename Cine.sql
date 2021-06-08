@@ -69,7 +69,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Cine`.`Proyeccion` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `fecha` DATE NOT NULL,
+  `fecha` VARCHAR(45) NOT NULL,
   `hora` VARCHAR(20) NOT NULL,
   `idPelicula` INT NOT NULL,
   `idSala` INT NOT NULL,
