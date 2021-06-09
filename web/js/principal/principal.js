@@ -20,7 +20,7 @@ function row(listado, proyeccion){
         "</div>" +
         "<div class = 'content'>" +
           "<h2> " + proyeccion.pelicula.nombre + "</h2>" +
-        "<ul class = 'list-unstyled'>";
+        "<ul class = 'list-unstyled' id = 'pel"+proyeccion.pelicula.id+"'>";
         for(i = 0; i<proyecciones.length; i++){
             if(proyecciones[i].pelicula.id == proyeccion.pelicula.id && proyecciones[i].id != proyeccion.id){
                 html+= "<li><a href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +

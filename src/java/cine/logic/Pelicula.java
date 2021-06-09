@@ -14,7 +14,7 @@ public class Pelicula {
     int precio;
     String nombre;
     String estado;
-
+    
     public Pelicula(int id, int precio, String nombre, String estado) {
         this.id = id;
         this.precio = precio;
