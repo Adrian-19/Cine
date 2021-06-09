@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Pelicula.java</file>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Sala.java</file>
@@ -14,5 +15,8 @@
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/menu.js</file>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/RegistroApplication.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> 219656e240b40298e4856c3a71366e8a533359fb
     </open-files>
 </project-private>
