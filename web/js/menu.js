@@ -14,12 +14,16 @@ var menu = `
                     <a class="nav-link active" aria-current="page" href="#">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="crear-Pelicula">Register Pelicula</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="crearPelicula">Register Pelicula</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" id="ver-asientos">Ver asientos</a>
+                  </li>
+
                 </ul>
                 <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search Movie" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" id="busqueda" type="search" placeholder="Search Movie" aria-label="Search">
+                  <button class="btn btn-outline-success" type="button" id="buscar">Search</button>
                 </form>
               </div>
             </div>

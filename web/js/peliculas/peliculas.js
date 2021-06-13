@@ -1,15 +1,15 @@
-var pelicula = {id: 0, precio: 0, estado: "", nombre: ""};
+var pelicula = {id: 0, precio: 0, nombre: "" ,estado: ""};
 var peliculas = new Array();
 var url="http://localhost:8080/Cine/";
 var mode='A';
 
-function render() {
+function renderPelicula() {
 
     $("#precio").val(pelicula.precio);
     $("#nombre").val(pelicula.nombre);
         switch(mode){
             case 'A':
-                $("#id").val(peliculas.length.toString());
+                $("#id").val(pelicula.id);
                 $("#id").prop("readonly", true);
                 $('#registrar-Pelicula').off('click').on('click', registrarPelicula);
                 break;
@@ -25,15 +25,17 @@ function render() {
     $('#add-modal-peliculas').modal('show');
 }
 
-function load() {
+function loadPelicula() {
     pelicula = Object.fromEntries((new FormData($("#formulario-peliculas").get(0))).entries());
+    console.log("Esta es la pelicula cargada : "+pelicula.id+" "+pelicula.precio+" "+pelicula.nombre+" "+pelicula.estado); //solo para probar
+    
 }
 
-function reset() {
-    pelicula = {id: "", precio: 0, estado: "", nombre: ""};
+function resetPelicula() {
+    pelicula = {id:peliculas.length+1, precio: 0, estado: "", nombre: ""};
 }
 
-function validar() {
+function validarPelicula() {
     var error = false;
     $("#formulario-peliculas input").removeClass("invalid");
     error |= $("#formulario-peliculas input[type='text']").filter((i, e) => {
@@ -59,40 +61,40 @@ function validar() {
 }
 
 function modificarPelicula(){
-    load();
-    if(!validar()) return;
+    loadPelicula();
+    if(!validarPelicula()) return;
     let request = new Request(url+'api/peliculas', {method: 'PUT', headers: { 'Content-Type': 'application/json'},body: JSON.stringify(pelicula)});
     (async ()=>{
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#add-modal-peliculas #errorDiv"));return;}
-        fetchAndList();
-        reset();
+        fetchAndListP();
+        resetPelicula();
         $('#add-modal-peliculas').modal('hide');                
     })();     
 }
 
-function edit(id){
+function editPelicula(id){
     let request = new Request(url+'api/peliculas/'+id, {method: 'GET', headers: { }});
     (async ()=>{
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}
         pelicula = await response.json();
         mode='E';
-        render();        
+        renderPelicula();        
     })();         
 }
 
 function registrarPelicula() {
-    load();
-    if (!validar())
+    loadPelicula();
+    if (!validarPelicula())
         return;
     let request = new Request(url+'api/peliculas', {method: 'POST', headers: { 'Content-Type': 'application/json'},body: JSON.stringify(pelicula)});
     (async ()=>{
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#add-modal-peliculas #errorDiv"));return;}
         addImagen();
-        fetchAndList();
-        reset();
+        fetchAndListP();
+        resetPelicula();
         $('#add-modal-peliculas').modal('hide');                
     })();     
     console.log(listar_usuarios());//solo para probar
@@ -113,25 +115,25 @@ function addImagen(){
 
 
 
-function makenew() {
-    reset();
+function makenew_P() {
+    resetPelicula();
     mode='A'; 
-    render();
+    renderPelicula();
 }
 
 
-function loaded() {
-    fetchAndList();
-    $("#crear-Pelicula").click(makenew);
+function loaded_peliculas() {
+    fetchAndListP();
+    $("#crearPelicula").click(makenew_P);
+    $("#buscar").click(buscarPelicula);
    
 }
 
-$(loaded);
+$(loaded_peliculas);
 
 function errorMessage(status,place){  
         switch(status){
             case 404: error= "Registro no encontrado"; break;
-            case 403: case 405: error="Usuario no autorizado"; break;
             case 406: case 405: error="Pelicula ya existe"; break;
         };            
         place.html('<div class="alert alert-danger fade show">' +
@@ -140,7 +142,7 @@ function errorMessage(status,place){
         return;        
 }  
 
-function fetchAndList(){
+function fetchAndListP(){
     let request = new Request(url+'api/peliculas', {method: 'GET', headers: { }});
     (async ()=>{
         const response = await fetch(request);
@@ -151,6 +153,21 @@ function fetchAndList(){
         console.log(listar_usuarios());//solo para probar
     })();    
 } 
+
+function buscarPelicula(){
+    var busqueda = $("#busqueda").val();
+    console.log("Se realizo la siguiente busqueda: "+busqueda);
+    let request = new Request(url+'api/peliculas?nombre='+busqueda, {method: 'GET', headers: { }});
+    (async ()=>{
+        const response = await fetch(request);
+        if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}
+        peliculas = await response.json(); 
+        listAllP();
+        list();
+        console.log(listar_usuarios());//solo para probar
+    })();    
+}
+
 
 function listar_usuarios() {
     txt = '';
@@ -184,97 +201,8 @@ function row(listado,pelicula){
                 "<td>"+pelicula.precio+"</td>"+
                 "<td>"+pelicula.estado+"</td>"+
                 "<td><img src='"+url+"api/peliculas/"+pelicula.id+"/imagen' class='icon_large' ></td>"+                
-                "<td id='edit'><img src='images/edit.png'></td>");
-        tr.find("#edit").on("click",()=>{edit(pelicula.id);});
+                "<td id='edit'><img src='/Cine/imagenes/edit.png'></td>");
+        tr.find("#edit").on("click",()=>{editPelicula(pelicula.id);});
 	listado.append(tr);           
 }
 
-//----------------------------------------------------------------------------------
-
-//var fila_asientos = 6;
-//var colum_asientos = 8;
-//var num_asi = 1;
-//var proyeccion = {id: "", precio: 1000, estado: "", nombre: "", asientos: ["1", "2"]};
-//var selec = new Array();
-//var cargado = false;
-//
-//
-//function render_a() {
-//    var cont = 1;
-//    var panel = $('#panel-asientos');
-//    cargarFilas(panel, cont);
-//    $('#add-modal-asientos').modal('show');
-//    cargado = true;
-//
-//}
-//
-//
-//function cargarAsientos(fila) {
-//
-//    for (var j = 0; j < colum_asientos; j++) {
-//        var asiento = $("<div />");
-//        asiento.addClass("seat");
-//        asiento.attr("id", "seat");
-//        asiento.attr("data-value", num_asi.toString());
-//        if (proyeccion.asientos.includes(num_asi.toString())) {
-//            asiento.addClass("occupied");
-//        } else {
-//            if (selec.includes(num_asi.toString())) {
-//                asiento.addClass("selected");
-//
-//            }
-//            asiento.on('click', function () {
-//                if ($(this).hasClass("selected") && cargado) {
-//                    var i = selec.indexOf($(this).attr("data-value"));
-//                    if (i !== -1) {
-//                        selec.splice(i, 1);
-//                    }
-//                    $(this).removeClass("selected");
-//
-//                } else {
-//                    if (!$(this).hasClass("occupied") && cargado) {
-//
-//                        $(this).addClass("selected");
-//                        selec.push($(this).attr("data-value"));
-//                    }
-//
-//                }
-//                var total = selec.length * proyeccion.precio;
-//                $('#count').text(selec.length);
-//                $('#total').text(total);
-//                console.log(JSON.stringify(selec));
-//            });
-//        }
-//        fila.append(asiento);
-//        num_asi++;
-//        console.log("Se añadio un asiento");
-//    }
-//
-//
-//}
-//
-//function cargarFilas(panel) {
-//    num_asi = 1;
-//    for (var i = 0; i < fila_asientos; i++) {
-//        var div = $("<div />");
-//        div.addClass("fila");
-//        cargarAsientos(div);
-//        panel.append(div);
-//        console.log("Se añadio una fila");
-//
-//    }
-//
-//
-//}
-//
-//
-//
-//function reset_a() {
-//    $(".fila").remove();
-//}
-//
-//
-//function makenew_a() {
-//    reset_a();
-//    render_a();
-//}

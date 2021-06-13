@@ -6,14 +6,22 @@
 package cine.logic;
 
 import cine.data.ProyeccionDao;
+<<<<<<< HEAD
 import cine.data.UsuarioDao;
+=======
+import cine.data.PeliculaDao;
+import java.util.ArrayList;
+>>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author ESCINF
  */
 public class Service {
+
     private static Service theInstance;
 
     public static Service instance() {
@@ -22,23 +30,68 @@ public class Service {
         }
         return theInstance;
     }
-    
+
     private ProyeccionDao proyeccionDao;
+<<<<<<< HEAD
     private UsuarioDao usuarioDao;
     
     public Service(){
         proyeccionDao = new ProyeccionDao();
         usuarioDao = new UsuarioDao();
+=======
+    private PeliculaDao peliculaDao;
+
+    public Service() {
+        proyeccionDao = new ProyeccionDao();
+        peliculaDao = new PeliculaDao();
+>>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
     }
-    
+
     // ------------ PROYECCIONES -------------
-    public List<Proyeccion> getListaProyecciones(){
+    public List<Proyeccion> getListaProyecciones() {
         return proyeccionDao.findAll();
     }
+<<<<<<< HEAD
     
     // ------------ USUARIO -------------
     
     public Usuario getUsuario(String cedula) throws Exception{
         return usuarioDao.read(cedula);
     }
+=======
+
+    // ------------ Peliculas -------------
+    public List<Pelicula> getListaPeliculas() {
+        return peliculaDao.findAll();
+        
+    }
+    
+    public List<Pelicula> getListaPeliculas(String nombre) {
+        List<Pelicula> arr =  peliculaDao.findAll();
+        List<Pelicula> result = new ArrayList();
+        for(Pelicula p:arr){
+            if(p.getNombre().toLowerCase().contains(nombre.toLowerCase())) result.add(p);
+        }
+        return result;
+    }
+
+    public void añadirPelicula(Pelicula p) {
+        try {
+            peliculaDao.create(p);
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void peliculaUpdate(Pelicula pel)throws Exception {
+             peliculaDao.update(pel);
+    }
+    
+    public Pelicula peliculaEdit(int id)throws Exception {
+        return peliculaDao.read(id);
+    }
+    
+    
+    
+>>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
 }
