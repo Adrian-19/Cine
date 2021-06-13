@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-        <!-- Add modal -->
-        <div class="modal fade" id="add-modal" tabindex="-1" role="dialog">
+
+        <div class="modal fade" id="loginDialog" tabindex="-1" role="dialog">
             <div class="modal-dialog" style="width: 400px">
                 <div class="modal-content">
                     <div class="modal-header" >
                         <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="images/usuario.png" style="max-width: 50px; max-height: 50px"> </div>
                         <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
                     </div> 
-                    <form id="formulario" >
+                    <form id="formularioLogin" >
                         <div class="modal-body">
                             <div id="div-login-msg">
                                 <div id="icon-login-msg" ></div>
-                                <span id="text-login-msg">Registrar Usuario</span>
+                                <span id="text-login-msg">Iniciar Sesion</span>
                             </div>
                             <br>
                             <div class="form-group">
                                 <label for="cedula">Cedula</label>
-                                <input type="text" class="form-control" name="cedula" id="cedula" placeholder="Cedula">
-                            </div>
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                                <input type="text" class="form-control" name="cedula" id="cedulaLogin" placeholder="Cedula">
                             </div>
                             <div class="form-group">
                                 <label for="contraseña">Contraseña</label>
-                                <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña">
+                                <input type="password" class="form-control" name="contraseña" id="contraseñaLogin" placeholder="Contraseña">
                             </div>                
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                             <div>
-                                <input type="button" id="registrarse" class="btn btn-primary btn-lg btn-block" value="Registrarse">
+                                <input type="button" id="login" class="btn btn-primary btn-lg btn-block" value="Login">
                             </div>
                         </div>
                     </form>                 

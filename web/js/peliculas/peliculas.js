@@ -146,7 +146,7 @@ function fetchAndList(){
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}
         peliculas = await response.json(); 
-        listAllP();
+        //listAllP();
         list();
         console.log(listar_usuarios());//solo para probar
     })();    
@@ -160,17 +160,17 @@ function listar_usuarios() {
     return txt;
 }
 
-function listP(listado,pelicula){
-	var div =$("<div />");
-	div.html("<div class='card'><div class ='imgBx'><img src = '"+url+"api/peliculas/"+pelicula.id+"/imagen'></div><div class = 'content'><h2>"+pelicula.nombre+"</h2><div class = 'list-group'><a href='#' class = 'list-group-item' id='ver-asientos'>Item One</a><a href='#' class = 'list-group-item' id='ver-asientos'>Item Two</a><a href='#' class = 'list-group-item' id='ver-asientos'>Item Three</a></div></div></div>");
-	//div.find("#ver-asientos").on("click",makenew_a);
-        listado.append(div);           
-}
-
-function listAllP(){
-    $("#panel-pelis").html("");
-    peliculas.forEach( (p)=>{listP($("#panel-pelis"),p);});	
-}  
+//function listP(listado,pelicula){
+//	var div =$("<div />");
+//	div.html("<div class='card'><div class ='imgBx'><img src = '"+url+"api/peliculas/"+pelicula.id+"/imagen'></div><div class = 'content'><h2>"+pelicula.nombre+"</h2><div class = 'list-group'><a href='#' class = 'list-group-item' id='ver-asientos'>Item One</a><a href='#' class = 'list-group-item' id='ver-asientos'>Item Two</a><a href='#' class = 'list-group-item' id='ver-asientos'>Item Three</a></div></div></div>");
+//	//div.find("#ver-asientos").on("click",makenew_a);
+//        listado.append(div);           
+//}
+//
+//function listAllP(){
+//    $("#panel-pelis").html("");
+//    peliculas.forEach( (p)=>{listP($("#panel-pelis"),p);});	
+//}  
 
 function list(){
     $("#tabla-pelis").html("");
