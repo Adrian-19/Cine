@@ -24,8 +24,8 @@ public class Model {
 
     private Model() {
         peliculas = new HashMap<Integer, Pelicula>();
-        peliculas.put(111, new Pelicula(111, 2000, "En_cartelera", "Shrek"));
-        peliculas.put(222, new Pelicula(222, 3000, "Proximamente", "Rango"));
+        peliculas.put(111, new Pelicula(111, 2000,  "Shrek","En_cartelera"));
+        peliculas.put(222, new Pelicula(222, 3000, "Rango","Proximamente"));
     }
 
     public List<Pelicula> peliculaListAll() {

@@ -5,6 +5,7 @@
  */
 package cine.presentation;
 
+import cine.logic.Service;
 import cine.logic.Model;
 import cine.logic.Pelicula;
 import java.io.File;
@@ -12,8 +13,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.NotAcceptableException;
@@ -39,15 +42,19 @@ public class Peliculas {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<Pelicula> search(@DefaultValue("") @QueryParam("nombre") String nombre) { 
-        return Model.instance().peliculaSearch(nombre);
+        cine.logic.Service service = cine.logic.Service.instance();    
+        return service.getListaPeliculas(nombre);
     } 
     
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_JSON})
     public Pelicula get(@PathParam("id") String id) {
+                cine.logic.Service service = cine.logic.Service.instance();    
+        
         try {
-            return Model.instance().peliculaEdit(Integer.parseInt(id));
+            return service.peliculaEdit(Integer.parseInt(id));
+   
         } catch (Exception ex) {
             throw new NotFoundException(); 
         }
@@ -66,7 +73,8 @@ public class Peliculas {
     @Consumes(MediaType.APPLICATION_JSON) 
     public void add(Pelicula p) {  
         try {
-            Model.instance().peliculaAdd(p);
+             cine.logic.Service service = cine.logic.Service.instance();
+             service.añadirPelicula(p);
         } catch (Exception ex) {
             throw new NotAcceptableException(); 
         }
@@ -92,8 +100,9 @@ public class Peliculas {
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void update(Pelicula p) {  
+         cine.logic.Service service = cine.logic.Service.instance(); 
         try {
-            Model.instance().peliculaUpdate(p);
+             service.peliculaUpdate(p);
         } catch (Exception ex) {
             throw new NotFoundException(); 
         }

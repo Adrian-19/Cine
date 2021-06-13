@@ -6,7 +6,7 @@ var selec = new Array();
 var cargado = false;
 
 
-function render() {
+function render_asientos() {
     var cont = 1;
     var panel = $('#panel-asientos');
     cargarFilas(panel, cont);
@@ -101,26 +101,26 @@ function cargarFilas(panel) {
 //
 //}
 
-function load() {
+//function load() {
+//
+//}
 
-}
-
-function reset() {
+function reset_asientos() {
     $(".fila").remove();
 }
 
 
-function makenew() {
-    reset();
-    render();
+function makenew_asientos() {
+    reset_asientos();
+    render_asientos();
 }
 
 
-function loaded() {
-    $("#ver-asientos").click(makenew);
+function loaded_asientos() {
+    $("#ver-asientos").click(makenew_asientos);
 }
 
-$(loaded);
+$(loaded_asientos);
 
 
 
