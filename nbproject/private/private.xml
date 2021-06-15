@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/principal/principal.js</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/data/PeliculaDao.java</file>
@@ -23,23 +21,5 @@
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/asientos/asientos.js</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/css/style.css</file>
         </group>
-=======
-<<<<<<< HEAD
-        <group>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Pelicula.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Sala.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/ProyeccionDao.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Principal.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Service.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Proyeccion.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/PeliculaDao.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/principal/principal.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/menu.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/RegistroApplication.java</file>
-        </group>
-=======
-        <group/>
->>>>>>> 219656e240b40298e4856c3a71366e8a533359fb
->>>>>>> e4a87059340739799144d0b59abe63b3a782c172
     </open-files>
 </project-private>
