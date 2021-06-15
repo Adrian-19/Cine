@@ -6,12 +6,12 @@
 package cine.logic;
 
 import cine.data.ProyeccionDao;
-<<<<<<< HEAD
+
 import cine.data.UsuarioDao;
-=======
+
 import cine.data.PeliculaDao;
 import java.util.ArrayList;
->>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
+
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,33 +32,26 @@ public class Service {
     }
 
     private ProyeccionDao proyeccionDao;
-<<<<<<< HEAD
     private UsuarioDao usuarioDao;
-    
+       private PeliculaDao peliculaDao;
     public Service(){
         proyeccionDao = new ProyeccionDao();
         usuarioDao = new UsuarioDao();
-=======
-    private PeliculaDao peliculaDao;
+          peliculaDao = new PeliculaDao();
 
-    public Service() {
-        proyeccionDao = new ProyeccionDao();
-        peliculaDao = new PeliculaDao();
->>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
     }
 
     // ------------ PROYECCIONES -------------
     public List<Proyeccion> getListaProyecciones() {
         return proyeccionDao.findAll();
     }
-<<<<<<< HEAD
-    
+
     // ------------ USUARIO -------------
     
     public Usuario getUsuario(String cedula) throws Exception{
         return usuarioDao.read(cedula);
     }
-=======
+
 
     // ------------ Peliculas -------------
     public List<Pelicula> getListaPeliculas() {
@@ -92,6 +85,4 @@ public class Service {
     }
     
     
-    
->>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
 }
