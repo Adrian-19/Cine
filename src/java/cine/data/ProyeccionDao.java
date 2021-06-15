@@ -41,6 +41,28 @@ public class ProyeccionDao {
         return proyecciones; 
     }
     
+    public List<Proyeccion> findByName(String nombre){
+        List<Proyeccion> proyecciones = new ArrayList<>();
+        String sql = "select * from proyeccion where nombre like '%"+nombre+"%'";
+        PeliculaDao peliDao = new PeliculaDao();
+        SalaDao salaDao = new SalaDao();
+        try{
+            PreparedStatement stm = Database.instance().prepareStatement(sql); 
+            ResultSet rs = Database.instance().executeQuery(stm); 
+            while(rs.next()){ 
+                Proyeccion p = from(rs);
+                int idPeli = p.getPelicula().getId();
+                p.setPelicula(peliDao.read(idPeli));
+                int idSala = p.getSala().getId();
+                p.setSala(salaDao.read(idSala));
+                
+                proyecciones.add(p); 
+            }
+        } catch (Exception ex) { }
+        
+        return proyecciones; 
+    }
+    
     public Proyeccion from(ResultSet rs){
         try{
             Proyeccion pro = new Proyeccion();
