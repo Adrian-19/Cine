@@ -6,12 +6,18 @@
 package cine.logic;
 
 import cine.data.ProyeccionDao;
+<<<<<<< HEAD
 
 import cine.data.UsuarioDao;
 
 import cine.data.PeliculaDao;
 import java.util.ArrayList;
 
+=======
+import cine.data.UsuarioDao;
+import cine.data.PeliculaDao;
+import java.util.ArrayList;
+>>>>>>> 4d25301d8860aac36576cede3b018ff445bc98f7
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,26 +38,45 @@ public class Service {
     }
 
     private ProyeccionDao proyeccionDao;
+<<<<<<< HEAD
+=======
+    private PeliculaDao peliculaDao;
+>>>>>>> 4d25301d8860aac36576cede3b018ff445bc98f7
     private UsuarioDao usuarioDao;
        private PeliculaDao peliculaDao;
     public Service(){
         proyeccionDao = new ProyeccionDao();
         usuarioDao = new UsuarioDao();
+<<<<<<< HEAD
           peliculaDao = new PeliculaDao();
 
+=======
+        peliculaDao = new PeliculaDao();
+>>>>>>> 4d25301d8860aac36576cede3b018ff445bc98f7
     }
 
     // ------------ PROYECCIONES -------------
     public List<Proyeccion> getListaProyecciones() {
         return proyeccionDao.findAll();
     }
+<<<<<<< HEAD
 
+=======
+    
+    public List<Proyeccion> getProyeccionesPorNombre(String nombre){
+        return proyeccionDao.findByName(nombre);
+    }
+    
+>>>>>>> 4d25301d8860aac36576cede3b018ff445bc98f7
     // ------------ USUARIO -------------
     
     public Usuario getUsuario(String cedula) throws Exception{
         return usuarioDao.read(cedula);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4d25301d8860aac36576cede3b018ff445bc98f7
 
     // ------------ Peliculas -------------
     public List<Pelicula> getListaPeliculas() {

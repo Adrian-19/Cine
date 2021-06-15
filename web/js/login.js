@@ -1,40 +1,41 @@
 var url="http://localhost:8080/Cine/";
+var usuario = {cedula: "", clave: "", tipo: 0};
+var mode= 'A';
 
-function login(){
-    if (!loginValidar()) return;
+function renderLogin(){
+    console.log("render");
+    $('#login').off('click').on('click', loginAction);
+    $('#add-modal-login').modal('show');
+}
+
+function loginAction(){
     usuario = {
         cedula: $("#cedulaLogin").val(),
         clave: $("#contraseñaLogin").val()
     };
-
     let request = new Request(url+'api/login', {method: 'POST', headers: { 'Content-Type': 'application/json'},body: JSON.stringify(usuario)});
     (async ()=>{
         const response = await fetch(request);
         //if (!response.ok) {errorMessage(response.status,$("#loginDialog #errorDiv"));return;}
         usuario = await response.json();
         sessionStorage.setItem('user', JSON.stringify(usuario));
-        $('#loginDialog').modal('hide');            
-       switch(usuario.tipo){
-           case '0': document.location = url+"principal.html"; break;
-       }                           
+        $('#loginP').modal('hide');                         
     })(); 
-    }
+}
 
-function loginValidar(){
-    $("#loginForm").addClass("was-validated");
-    return $("#loginForm").get(0).checkValidity(); 
+function resetLogin(){
+    usuario = {cedula: "", clave: "", tipo: 0};
+}
+
+function makenew_Login(){
+    console.log("make");
+    resetLogin();
+    renderLogin();
 }
 
 function loadLogin(){
-    let request = new Request(url+'login.html', {method: 'GET'});
-        (async ()=>{
-            const response = await fetch(request);
-            //if (!response.ok) {errorMessage(response.status,$("#loginDialog #errorDiv"));return;}
-            content = await response.text();
-            $('body').append(content); 
-            $("#login").click(login);
-            //$("#logout").click(logout);                          
-        })();  
+    console.log("LOADED");
+    $("#loginP").click(makenew_Login);
 }
 
 $(loadLogin);

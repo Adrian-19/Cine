@@ -125,7 +125,7 @@ function makenew_P() {
 function loaded_peliculas() {
     fetchAndListP();
     $("#crearPelicula").click(makenew_P);
-    $("#buscar").click(buscarPelicula);
+    //$("#buscar").click(buscarPelicula);
    
 }
 

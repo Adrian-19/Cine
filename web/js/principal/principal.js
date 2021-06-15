@@ -1,12 +1,10 @@
 var url="http://localhost:8080/Cine/";
 
+var pelicula = {id: 0, precio: 0, nombre: "" ,estado: ""};
 var proyecciones = new Array();
 
 // ---------------------------------------------------------------------------------------------------------
 
-// estamos recibiendo las proyecciones... cada proyeccion esta asociada a una pelicula.
-// debemos de quedarnos sobre la pelicula de la proyeccion y buscar las proyecciones
-// que tienen esa misma pelicula en la que estamos.
 function listProyecciones(){
     
     $("#listado").html("");
@@ -50,9 +48,21 @@ function fetchAndListPrincipal(){
     })(); 
 }
 
+function searchPelicula(){
+    var busqueda = $("#busqueda").val();
+    console.log("Busqueda: " + busqueda);
+    let request = new Request(url+'api/peliculas?nombre='+busqueda, {method: 'GET', headers: { }});
+    (async ()=>{
+        const response = await fetch(request);
+        if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}
+        proyecciones = await response.json(); 
+        listProyecciones();
+    })();
+}
+
 function loadedPrincipal(){
     fetchAndListPrincipal();
-    // $("#buscar").on("click", search);
+    $("#buscarPrincipal").click(searchPelicula);
 }
 
 $(loadedPrincipal);
