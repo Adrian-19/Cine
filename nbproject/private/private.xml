@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Login.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/login.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Usuario.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/UsuarioDao.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/peliculas/peliculas.js</file>
+=======
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/principal/principal.js</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/data/PeliculaDao.java</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/data/ProyeccionDao.java</file>
@@ -21,5 +28,28 @@
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/asientos/asientos.js</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/css/style.css</file>
         </group>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        <group>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Pelicula.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Sala.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/ProyeccionDao.java</file>
+>>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Principal.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/presentation/principal.html</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/presentation/login.html</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Service.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/principal/principal.js</file>
+        </group>
+<<<<<<< HEAD
+=======
+=======
+        <group/>
+>>>>>>> 219656e240b40298e4856c3a71366e8a533359fb
+>>>>>>> e4a87059340739799144d0b59abe63b3a782c172
+>>>>>>> 4cfc60eccd5e85b5bcf81fb46883b06050def358
+>>>>>>> e10dfd9d854dfbee086365779a3b17b0897fdc22
     </open-files>
 </project-private>
