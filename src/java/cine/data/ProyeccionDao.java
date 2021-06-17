@@ -43,7 +43,8 @@ public class ProyeccionDao {
     
     public List<Proyeccion> findByName(String nombre){
         List<Proyeccion> proyecciones = new ArrayList<>();
-        String sql = "select * from proyeccion where nombre like '%"+nombre+"%'";
+        String sql = "select p.id, p.fecha, p.hora, p.idPelicula, p.idSala from proyeccion p inner join pelicula e on p.idPelicula = e.id where e.nombre like '%" + nombre + "%'";
+        System.out.println("sql: " + sql);
         PeliculaDao peliDao = new PeliculaDao();
         SalaDao salaDao = new SalaDao();
         try{

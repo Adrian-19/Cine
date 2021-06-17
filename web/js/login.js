@@ -1,26 +1,54 @@
 var url="http://localhost:8080/Cine/";
-var usuario = {cedula: "", clave: "", tipo: 0};
 var mode= 'A';
 
 function renderLogin(){
-    console.log("render");
     $('#login').off('click').on('click', loginAction);
     $('#add-modal-login').modal('show');
 }
 
 function loginAction(){
+    if (!loginValidar()) return;
     usuario = {
         cedula: $("#cedulaLogin").val(),
-        clave: $("#contraseñaLogin").val()
+        clave: $("#contrasenaLogin").val()
     };
     let request = new Request(url+'api/login', {method: 'POST', headers: { 'Content-Type': 'application/json'},body: JSON.stringify(usuario)});
     (async ()=>{
         const response = await fetch(request);
-        //if (!response.ok) {errorMessage(response.status,$("#loginDialog #errorDiv"));return;}
+        if (!response.ok) {errorMessage(response.status,$("#add-modal-login #addErrorDiv"));return;}
         usuario = await response.json();
+        console.log(usuario);
         sessionStorage.setItem('user', JSON.stringify(usuario));
-        $('#loginP').modal('hide');                         
+        $('#add-modal-login').modal('hide');
+        document.location = url + "presentation/principal.html";                         
     })(); 
+}
+
+function logoutAction(){
+    let request = new Request(url+'api/login', {method: 'DELETE', headers: { }});
+        (async ()=>{
+            const response = await fetch(request);
+            //if (!response.ok) {errorMessage(response.status,$("#loginDialog #errorDiv"));return;}
+            sessionStorage.removeItem('user');
+            document.location = url+"presentation/principal.html";                         
+        })();
+}
+
+function loginValidar(){
+    $("#formularioLogin").addClass("was-validated");
+    return $("#formularioLogin").get(0).checkValidity(); 
+}
+
+function errorMessage(status,place){  
+    switch(status){
+        case 404: error= "Registro no encontrado"; break;
+        case 403: case 405: error="Usuario no autorizado"; break;
+        case 406: case 405: error="Usuario ya existe"; break;
+    };            
+    place.html('<div class="alert alert-danger fade show">' +
+    '<button type="button" class="close" data-dismiss="alert">' +
+    '&times;</button><h4 class="alert-heading">Error!</h4>'+error+'</div>');
+    return;        
 }
 
 function resetLogin(){
@@ -28,14 +56,13 @@ function resetLogin(){
 }
 
 function makenew_Login(){
-    console.log("make");
     resetLogin();
     renderLogin();
 }
 
 function loadLogin(){
-    console.log("LOADED");
     $("#loginP").click(makenew_Login);
+    $("#logoutP").click(logoutAction); 
 }
 
 $(loadLogin);

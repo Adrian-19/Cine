@@ -20,6 +20,7 @@ public class RegistroApplication extends Application {
         classes.add(MultiPartFeature.class);
         classes.add(Principal.class); 
         classes.add(Peliculas.class);
+        classes.add(Login.class);
         return classes;
     }   
 }

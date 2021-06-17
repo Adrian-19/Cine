@@ -6,20 +6,56 @@ var menu = `
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">`;
+
+                let usuarioJson = sessionStorage.getItem('user');
+                
+                if (usuarioJson!=null){ 
+                  let usuario= JSON.parse(usuarioJson);
+                  
+                  if ([0].includes(usuario.tipo)){
+                    menu+=`
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="crearPelicula">Registrar Pelicula</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="programarProyeccion">Programar Proyeccion</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="registrarSala">Registrar Sala</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="logoutP">Cerrar sesion</a>
+                    </li>
+                    `;
+                  }
+                  if([1].includes(usuario.tipo)){
+                    menu+=`
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="verCompras">Mis compras</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="logoutP">Cerrar sesion</a>
+                    </li>
+                    `;
+                  }
+                }
+                else{
+                  menu+=`
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="loginP">Login</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Register</a>
+                    <a class="nav-link active" aria-current="page" href="#">Registrarme</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="crearPelicula">Register Pelicula</a>
-                  </li>
+                  
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="ver-asientos">Ver asientos</a>
                   </li>
-
+                  `;
+                }
+                  
+                menu+=`
                 </ul>
                 <form class="d-flex">
                   <input class="form-control me-2" type="search" id="busqueda" placeholder="Search Movie" aria-label="Search">
