@@ -16,7 +16,7 @@ var menu = `
                   if ([0].includes(usuario.tipo)){
                     menu+=`
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#" id="crearPelicula">Registrar Pelicula</a>
+                      <a class="nav-link active" aria-current="page" href="/Cine/presentation/RegistroPeliculas/registroPeliculas.html">Registrar Pelicula</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#" id="programarProyeccion">Programar Proyeccion</a>
@@ -44,13 +44,6 @@ var menu = `
                   menu+=`
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
-                  </li>
-                  <li class="nav-item">
-<<<<<<< HEAD
-                    <a class="nav-link active" aria-current="page" href="/Cine/presentation/RegistroPeliculas/registroPeliculas.html" >Register Pelicula</a>
-=======
-                    <a class="nav-link active" aria-current="page" href="#">Registrarme</a>
->>>>>>> 94f9ce2fd8d4e2da42e43a60578ff6dcc79299b1
                   </li>
                   
                   <li class="nav-item">
