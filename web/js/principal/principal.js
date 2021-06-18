@@ -21,11 +21,14 @@ function rowProyeccion(listado, proyeccion){
             "<div class = 'content'>" +
               "<h2> " + proyeccion.pelicula.nombre + "</h2>" +
             "<ul class = 'list-unstyled' id = 'pel"+proyeccion.pelicula.id+"'>";
-    
-            html+= "<li><a href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
+//    agregar id 
+            html+= "<li id = 'pro"+ proyeccion.id + "'><a  href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
                     "</a></li>" + 
                     "</ul> </div> </div>";
-
+            
+            // función registrar compra ** 
+            $("#pro"+proyeccion.id).click(makenew_asientos); 
+            
             card.html(html);
             listado.append(card);
         }
