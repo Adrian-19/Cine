@@ -13,7 +13,6 @@ function listProyecciones(){
 function rowProyeccion(listado, proyeccion){
     if(!$('#pel' + proyeccion.pelicula.id).length){
         if(proyeccion.pelicula.estado == "En Cartelera"){
-            console.log("primer pelicula con id " + proyeccion.pelicula.id + ". Aqui se agrega la proyeccion: " + proyeccion.id);
             var card = $("<div class = 'card'> </div>");
             var html = 
             "<div class = 'imgBx'>" + 
@@ -45,16 +44,14 @@ function fetchAndListPrincipal(){
     (async ()=>{
         const response = await fetch(request);
         //if (!response.ok) {errorMessage(response.status,$("#buscarDiv #errorDiv"));return;}
-        proyecciones = await response.json();
-        console.log(proyecciones);
+        proyecciones = await response.json(); 
         listProyecciones();              
     })(); 
 }
 
 function searchPelicula(){
     var busqueda = $("#busqueda").val();
-    console.log("Busqueda: " + busqueda);
-    let request = new Request(url+'api/peliculas?nombre='+busqueda, {method: 'GET', headers: { }});
+    let request = new Request(url+'api/principal?nombre='+busqueda, {method: 'GET', headers: { }});
     (async ()=>{
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}

@@ -6,9 +6,18 @@
 package cine.logic;
 
 import cine.data.ProyeccionDao;
+
+
+import cine.data.UsuarioDao;
+
+import cine.data.PeliculaDao;
+import java.util.ArrayList;
+
+
 import cine.data.UsuarioDao;
 import cine.data.PeliculaDao;
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -29,29 +38,39 @@ public class Service {
     }
 
     private ProyeccionDao proyeccionDao;
+
     private PeliculaDao peliculaDao;
+
     private UsuarioDao usuarioDao;
     
+  
+       
     public Service(){
         proyeccionDao = new ProyeccionDao();
         usuarioDao = new UsuarioDao();
+
+          peliculaDao = new PeliculaDao();
+
         peliculaDao = new PeliculaDao();
+
     }
 
     // ------------ PROYECCIONES -------------
     public List<Proyeccion> getListaProyecciones() {
         return proyeccionDao.findAll();
     }
+
     
     public List<Proyeccion> getProyeccionesPorNombre(String nombre){
         return proyeccionDao.findByName(nombre);
     }
-    
+
     // ------------ USUARIO -------------
     
     public Usuario getUsuario(String cedula) throws Exception{
         return usuarioDao.read(cedula);
     }
+
 
     // ------------ Peliculas -------------
     public List<Pelicula> getListaPeliculas() {
