@@ -1,7 +1,7 @@
 var menu = `
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">CNG</a>
+              <a class="navbar-brand" href="/Cine/presentation/principal.html">CNG</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -14,7 +14,7 @@ var menu = `
                     <a class="nav-link active" aria-current="page" href="#">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="crearPelicula">Register Pelicula</a>
+                    <a class="nav-link active" aria-current="page" href="/Cine/presentation/RegistroPeliculas/registroPeliculas.html" >Register Pelicula</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="ver-asientos">Ver asientos</a>
