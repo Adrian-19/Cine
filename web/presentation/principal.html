@@ -16,12 +16,11 @@ and open the template in the editor.
         <title>Cine</title>
         <script src="../js/menu.js"></script>
          <!-- Poner los scrips abajo de esto  -->
-        <script src="../js/login.js"></script>
         <script src="../js/principal/principal.js"></script>
 <!--        <script src="../js/registro/registro.js"></script>-->
         <script src="../js/peliculas/peliculas.js"></script>
         <script src="../js/asientos/asientos.js"></script>
-        
+        <script src="../js/login.js"></script>
     </head>
     <body>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -122,16 +121,14 @@ and open the template in the editor.
         </div>
         
         <!-- Option : Login  -->
-
-        
-        
-        
         
         <div class="modal fade" id="add-modal-login" tabindex="-1" role="dialog">
             <div class="modal-dialog" style="width: 400px">
                 <div class="modal-content">
                     <div class="modal-header" >
-                        <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="/Cine/imagenes/usuario.png" style="max-width: 50px; max-height: 50px"> </div>
+                        <div class="d-flex justify-content-center" style="width: 90%">  
+<!--                            <img class="img-circle" id="img_logo" src="/Cine/imagenes/usuario.png" style="max-width: 50px; max-height: 50px"> -->
+                        </div>
                         <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
                     </div> 
                     <form id="formularioLogin" >
@@ -147,7 +144,7 @@ and open the template in the editor.
                             </div>
                             <div class="form-group">
                                 <label for="contraseña">Contraseña</label>
-                                <input type="password" class="form-control" name="contraseña" id="contraseñaLogin" placeholder="Contraseña">
+                                <input type="password" class="form-control" name="contraseña" id="contrasenaLogin" placeholder="Contraseña">
                             </div>                
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
