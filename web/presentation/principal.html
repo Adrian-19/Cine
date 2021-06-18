@@ -138,6 +138,50 @@ and open the template in the editor.
             </div>
             <div id="ErrorDiv" style="width:30%; margin: auto;"></div>              
         </div>
+        
+<!-- Inicio de registro de clientes  -->
+
+        <!-- Option : Registro Cliente -->
+        <div class="modal fade" id="add-modal-peliculas" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 400px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="/Cine/imagenes/addClient.png" style="max-width: 50px; max-height: 50px"> </div>
+                        <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
+                    </div>
+                    <form id="formulario-registro-cliente" >
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" ></div>
+                                <span id="text-login-msg">Registrarse</span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="id">ID</label>
+                                <input type="number" class="form-control" name="id" id="id" placeholder="ID">
+                            </div>                        
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                            </div>  
+
+                        </div>
+                    </form>
+
+                    <div class="modal-footer d-flex justify-content-center">
+                        <div>
+                            <input type="button" id="registrar-Cliente" class="btn btn-primary btn-lg btn-block" value="Registrar">
+                        </div>
+                    </div>
+
+                </div>         
+            </div>
+            <div id="ErrorDiv" style="width:30%; margin: auto;"></div>              
+        </div>
+        
+ <!-- Fin de registro de clientes  -->       
+        
+        
         <!-- Option : Asientos -->
         <div class="modal fade" id="add-modal-asientos" tabindex="-1" role="dialog">
             <div class="modal-dialog" style="width: 400px">
