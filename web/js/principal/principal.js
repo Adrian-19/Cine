@@ -22,20 +22,23 @@ function rowProyeccion(listado, proyeccion){
               "<h2> " + proyeccion.pelicula.nombre + "</h2>" +
             "<ul class = 'list-unstyled' id = 'pel"+proyeccion.pelicula.id+"'>";
 //    agregar id 
-            html+= "<li id = 'pro"+ proyeccion.id + "'><a  href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
+            html+= "<li ><a id = 'pro"+proyeccion.id +"' href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
                     "</a></li>" + 
                     "</ul> </div> </div>";
             
             // función registrar compra ** 
-            $("#pro"+proyeccion.id).click(makenew_asientos); 
+            
             
             card.html(html);
             listado.append(card);
+            $("#pro"+proyeccion.id).on("click",()=>{makenew_asientos(proyeccion);});
+            
         }
     }
     else{
         $('#pel' + proyeccion.pelicula.id).append("<li><a href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
                 "</a></li>");
+        
     }
 }
 

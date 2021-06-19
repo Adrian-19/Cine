@@ -27,6 +27,9 @@ var menu = `
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#" id="logoutP">Cerrar sesion</a>
                     </li>
+                    <li class="nav-item">
+                     <a class="nav-link active" href="/Cine/presentation/Tiquetes/showRecord">Tiquetes</a>
+                    </li> 
                     `;
                   }
                   if([1].includes(usuario.tipo)){

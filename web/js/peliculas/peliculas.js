@@ -200,7 +200,7 @@ function row(listado,pelicula){
                 "<td>"+pelicula.nombre+"</td>"+
                 "<td>"+pelicula.precio+"</td>"+
                 "<td>"+pelicula.estado+"</td>"+
-                //"<td><img src='"+url+"api/peliculas/"+pelicula.id+"/imagen' class='icon_large' ></td>"+                
+                "<td><img src='"+url+"api/peliculas/"+pelicula.id+"/imagen' class='icon_large' ></td>"+                
                 "<td id='edit'><img src='/Cine/imagenes/edit.png'></td>");
         tr.find("#edit").on("click",()=>{editPelicula(pelicula.id);});
 	listado.append(tr);           
