@@ -5,6 +5,7 @@
  */
 package cine.logic;
 
+import cine.data.ClienteDao;
 import cine.data.ProyeccionDao;
 
 
@@ -43,6 +44,7 @@ public class Service {
 
     private UsuarioDao usuarioDao;
     
+    private ClienteDao clienteDao;
   
        
     public Service(){
@@ -71,7 +73,12 @@ public class Service {
         return usuarioDao.read(cedula);
     }
 
-
+    // ------------ CLIENTE -------------
+    
+    public Cliente getCliente(String cedula) throws Exception{
+        return clienteDao.read(cedula);
+    }
+    
     // ------------ Peliculas -------------
     public List<Pelicula> getListaPeliculas() {
         return peliculaDao.findAll();

@@ -60,7 +60,4 @@ public class Pelicula {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
-    
-    
 }
