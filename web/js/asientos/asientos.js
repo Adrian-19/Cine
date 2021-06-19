@@ -1,7 +1,7 @@
 var fila_asientos = 6;
 var colum_asientos = 8;
 var num_asi = 1;
-var proyeccion = {id: "", precio: 1000, estado: "", nombre: "", asientos: ["1", "2"]};
+var proyeccion = { asientos:[], fecha:"21 mayo", hora:"2 pm", id:2, pelicula:{estado:"En Cartelera",id:2,nombre:"Shrek",precio:3000},sala:{id:1,numeroSala:"5"}};
 var selec = new Array();
 var cargado = false;
 
@@ -46,15 +46,15 @@ function cargarAsientos(fila) {
                     }
 
                 }
-                var total = selec.length * proyeccion.precio;
+                var total = selec.length * proyeccion.pelicula.precio;
                 $('#count').text(selec.length);
                 $('#total').text(total);
-                console.log(JSON.stringify(selec));
+
             });
         }
         fila.append(asiento);
         num_asi++;
-        console.log("Se añadio un asiento");
+
     }
 
 
@@ -67,7 +67,6 @@ function cargarFilas(panel) {
         div.addClass("fila");
         cargarAsientos(div);
         panel.append(div);
-        console.log("Se añadio una fila");
 
     }
 
@@ -110,7 +109,9 @@ function reset_asientos() {
 }
 
 
-function makenew_asientos() {
+function makenew_asientos(proyec) {
+    proyeccion = proyec;
+    console.log(JSON.stringify(proyeccion));
     reset_asientos();
     render_asientos();
 }

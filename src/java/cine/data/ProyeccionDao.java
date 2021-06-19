@@ -24,6 +24,8 @@ public class ProyeccionDao {
         String sql = "select * from proyeccion"; 
         PeliculaDao peliDao = new PeliculaDao();
         SalaDao salaDao = new SalaDao();
+        TiqueteDao tiqDao = new TiqueteDao();
+        CompraDao comDao = new CompraDao();
         try{
             PreparedStatement stm = Database.instance().prepareStatement(sql); 
             ResultSet rs = Database.instance().executeQuery(stm); 
@@ -33,6 +35,8 @@ public class ProyeccionDao {
                 p.setPelicula(peliDao.read(idPeli));
                 int idSala = p.getSala().getId();
                 p.setSala(salaDao.read(idSala));
+                p.setAsientos(tiqDao.asientosOcupados(p.getId()));
+                p.setCompras(comDao.compraProyeccion(p.getId()));
                 
                 proyecciones.add(p); 
             }
@@ -76,6 +80,25 @@ public class ProyeccionDao {
             
         }catch(SQLException ex){
             return null;
+        }
+    }
+        public Proyeccion read(int id) throws Exception{
+        String sql="select * from proyeccion where id=?";
+        PreparedStatement stm = Database.instance().prepareStatement(sql);
+        stm.setInt(1, id);
+        PeliculaDao peliDao = new PeliculaDao();
+        SalaDao salaDao = new SalaDao();
+        ResultSet rs =  Database.instance().executeQuery(stm);           
+        if (rs.next()) {
+            Proyeccion p = from(rs);
+                int idPeli = p.getPelicula().getId();
+                p.setPelicula(peliDao.read(idPeli));
+                int idSala = p.getSala().getId();
+                p.setSala(salaDao.read(idSala));
+                return p;
+        }
+        else{
+            throw new Exception ("Pelicula no Existe");
         }
     }
 }

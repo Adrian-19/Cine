@@ -5,6 +5,9 @@
  */
 package cine.logic;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author ESCINF
@@ -15,13 +18,17 @@ public class Proyeccion {
     String hora;
     Pelicula pelicula;
     Sala sala;
-
-    public Proyeccion(int id, String fecha, String hora, Pelicula pelicula, Sala sala) {
+    List<String> asientos;
+    List<Compra> compras;
+    
+    public Proyeccion(int id, String fecha, String hora, Pelicula pelicula, Sala sala,List<String> asientos,List<Compra> compras) {
         this.id = id;
         this.fecha = fecha;
         this.hora = hora;
         this.pelicula = pelicula;
         this.sala = sala;
+        this.asientos=asientos;
+        this.compras=compras;
     }
     
     public Proyeccion() {
@@ -30,6 +37,8 @@ public class Proyeccion {
         this.hora = "";
         this.pelicula = new Pelicula();
         this.sala = new Sala();
+        this.asientos=new ArrayList();
+        this.asientos=new ArrayList();
     }
     
     public int getId() {
@@ -71,6 +80,23 @@ public class Proyeccion {
     public void setSala(Sala sala) {
         this.sala = sala;
     }
+
+    public List<String> getAsientos() {
+        return asientos;
+    }
+
+    public void setAsientos(List<String> asientos) {
+        this.asientos = asientos;
+    }
+
+    public List<Compra> getCompras() {
+        return compras;
+    }
+
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
+    }
+    
     
     
 }
