@@ -15,7 +15,7 @@ function loginAction(){
     let request = new Request(url+'api/login', {method: 'POST', headers: { 'Content-Type': 'application/json'},body: JSON.stringify(usuario)});
     (async ()=>{
         const response = await fetch(request);
-        if (!response.ok) {errorMessage(response.status,$("#add-modal-login #addErrorDiv"));return;}
+        if (!response.ok) {errorMessage(response.status,$("#add-modal-login #addErrorDivLogin"));return;}
         usuario = await response.json();
         console.log(usuario);
         sessionStorage.setItem('user', JSON.stringify(usuario));

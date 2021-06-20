@@ -13,6 +13,7 @@ import cine.data.ProyeccionDao;
 import cine.data.TiqueteDao;
 import cine.data.UsuarioDao;
 import cine.data.PeliculaDao;
+import cine.data.SalaDao;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -45,6 +46,8 @@ public class Service {
     private CompraDao compraDao;
     
     private TiqueteDao tiqueteDao;
+    
+    private SalaDao salaDao;
   
        
     public Service(){
@@ -53,8 +56,7 @@ public class Service {
         peliculaDao = new PeliculaDao();
         compraDao = new CompraDao();
         tiqueteDao = new TiqueteDao();
-        
-
+        salaDao = new SalaDao();
     }
 
     // ------------ PROYECCIONES -------------
@@ -123,5 +125,15 @@ public class Service {
     public List<Tiquete> getListaTiquetesCompra(int idCom) {
         List<Tiquete> arr =  tiqueteDao.tiquetesCompra(idCom);
         return arr;
+    }
+    
+    // ------------ SALAS -------------
+    
+    public void addSala(Sala s){
+        try {
+            salaDao.create(s);
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

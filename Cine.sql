@@ -58,8 +58,9 @@ ENGINE = InnoDB;
 -- Table `Cine`.`Sala`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Cine`.`Sala` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `numeroSala` VARCHAR(45) NOT NULL,
+  `cantidadFilas` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -93,7 +94,7 @@ ENGINE = InnoDB;
 -- Table `Cine`.`Compra`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Cine`.`Compra` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `cedula` VARCHAR(45) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `idCliente` VARCHAR(45) NOT NULL,
