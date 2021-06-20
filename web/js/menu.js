@@ -48,10 +48,6 @@ var menu = `
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="ver-asientos">Ver asientos</a>
-                  </li>
                   `;
                 }
                   
