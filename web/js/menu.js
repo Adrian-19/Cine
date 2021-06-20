@@ -22,7 +22,7 @@ var menu = `
                       <a class="nav-link active" aria-current="page" href="#" id="programarProyeccion">Programar Proyeccion</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#" id="registrarSala">Registrar Sala</a>
+                      <a class="nav-link active" aria-current="page" href="#" id="regSala">Registrar Sala</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#" id="logoutP">Cerrar sesion</a>

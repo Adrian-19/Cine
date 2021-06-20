@@ -47,6 +47,8 @@ public class Login {
             try {
                 logged = cine.logic.Service.instance().getUsuario(usuario.getCedula());
                 if(!logged.getClave().equals(usuario.getClave())) throw new Exception("Clave incorrecta");
+                
+                //request.getSession(true).setAttribute("persona", logged);
                 request.getSession(true).setAttribute("user", logged);
                 return logged;
             } catch (Exception ex) {

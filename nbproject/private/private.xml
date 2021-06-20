@@ -3,24 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/logic/Model.java</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/data/Database.java</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/login.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/presentation/RegistroPeliculas/registroPeliculas.html</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/registro/registro.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/menu.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/presentation/registro/registro.html</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/logic/Service.java</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/bootstrap.min.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/data/PeliculaDao.java</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/css/style.css</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/presentation/login.html</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/peliculas/peliculas.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/presentation/Peliculas.java</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/asientos/asientos.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/principal/principal.js</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/src/java/cine/data/ProyeccionDao.java</file>
-            <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/presentation/principal.html</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Cliente.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Login.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/peliculas/peliculas.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/UsuarioDao.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/menu.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/presentation/registro/registro.html</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Pelicula.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/login.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Peliculas.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Principal.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/presentation/principal.html</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Service.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/asientos/asientos.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/principal/principal.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/ClienteDao.java</file>
         </group>
     </open-files>
 </project-private>

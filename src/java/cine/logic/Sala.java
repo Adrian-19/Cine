@@ -12,15 +12,18 @@ package cine.logic;
 public class Sala {
     int id;
     String numeroSala;
+    int cantidadFilas;
 
-    public Sala(int id, String numeroSala) {
+    public Sala(int id, String numeroSala, int cantidadFilas) {
         this.id = id;
         this.numeroSala = numeroSala;
+        this.cantidadFilas = cantidadFilas;
     }
     
     public Sala() {
         this.id = 0;
         this.numeroSala = "";
+        this.cantidadFilas = 0;
     }
     
     public int getId() {
@@ -37,6 +40,14 @@ public class Sala {
 
     public void setNumeroSala(String numeroSala) {
         this.numeroSala = numeroSala;
+    }
+
+    public int getCantidadFilas() {
+        return cantidadFilas;
+    }
+
+    public void setCantidadFilas(int cantidadFilas) {
+        this.cantidadFilas = cantidadFilas;
     }
     
     

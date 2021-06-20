@@ -12,7 +12,6 @@ and open the template in the editor.
         <link rel="stylesheet" href="/Cine/css/style.css" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"> 
-        <!-- <link rel="stylesheet" href="/Cine/css/bootstrap.min.css" type="text/css"> -->
         <title>Cine</title>
         <script src="../js/menu.js"></script>
          <!-- Poner los scrips abajo de esto  -->       
@@ -22,6 +21,7 @@ and open the template in the editor.
 <!--        <script src="../js/registro/registro.js"></script>-->
         <script src="../js/peliculas/peliculas.js"></script>
         <script src="../js/login.js"></script>
+        <script src="../js/registroSala/registroSala.js"></script>
     </head>
     <body>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -35,21 +35,23 @@ and open the template in the editor.
                     <img src="/Cine/imagenes/eternals.jpeg"  height="500" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Marvel Studios' ETERNALS</h5>
-                        <p>They were the ones who changed everything...</p>
+                        <p>Ellos fueron los que cambiaron todo...</p>
+                        <p>Proximamente En Cartelera</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="/Cine/imagenes/3.quiet_place.jpg" height="500" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h5>A Quiet Place Part II</h5>
+                        <p>El silencio no es suficiente.</p>
+                        <p>En Cartelera</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/Cine/imagenes/1.spiderman.png" height="500" class="d-block w-100" alt="...">
+                    <img src="/Cine/imagenes/2.spiderman.jpg" height="500" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <h5>Spider-man: No Way Home</h5>
+                        <p>Proximamente En Cartelera.</p>
                     </div>
                 </div>
             </div>
@@ -171,7 +173,7 @@ and open the template in the editor.
                 <div class="modal-content">
                     <div class="modal-header" >
                         <div class="d-flex justify-content-center" style="width: 90%">  
-<!--                            <img class="img-circle" id="img_logo" src="/Cine/imagenes/usuario.png" style="max-width: 50px; max-height: 50px"> -->
+                            <img class="img-circle" id="img_logo" src="/Cine/imagenes/userLogin.png" style="max-width: 50px; max-height: 50px">
                         </div>
                         <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
                     </div> 
@@ -199,7 +201,44 @@ and open the template in the editor.
                     </form>                 
                 </div>         
             </div>
-            <div id="addErrorDiv" style="width:30%; margin: auto;"></div>              
+            <div id="addErrorDivLogin" style="width:30%; margin: auto;"></div>              
+        </div>
+        
+        <!-- Option : Registrar Salas  -->
+        <div class="modal fade" id="add-modal-salas" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 400px">
+                <div class="modal-content">
+                    <div class="modal-header" >
+                        <div class="d-flex justify-content-center" style="width: 90%">  
+                            <img class="img-circle" id="img_logo" src="/Cine/imagenes/salaIcon.png" style="max-width: 50px; max-height: 50px"> 
+                        </div>
+                        <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
+                    </div> 
+                    <form id="formularioSalas" >
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" ></div>
+                                <span id="text-login-msg">Registrar Salas</span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="numSala">Numero de Sala</label>
+                                <input type="text" class="form-control" name="numSala" id="numSalaReg" placeholder="Numero de Sala">
+                            </div>
+                            <div class="form-group">
+                                <label for="cantFilas">Cantidad de filas de asientos</label>
+                                <input type="text" class="form-control" name="cantFilas" id="cantFilasReg" placeholder="Cantidad de filas de asientos">
+                            </div>                
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div>
+                                <input type="button" id="registrarSala" class="btn btn-primary btn-lg btn-block" value="Login">
+                            </div>
+                        </div>
+                    </form>                 
+                </div>         
+            </div>
+            <div id="addErrorDivRegSala" style="width:30%; margin: auto;"></div>              
         </div>
         
         <!-- Option 2: Separate Popper and Bootstrap JS -->

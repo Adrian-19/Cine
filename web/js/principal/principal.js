@@ -16,7 +16,7 @@ function rowProyeccion(listado, proyeccion){
             var card = $("<div class = 'card'> </div>");
             var html = 
             "<div class = 'imgBx'>" + 
-                "<img src = '" + "/Cine/imagenes/3.quiet_place.jpg" + "'>" + // Debemos de adjuntar la img de la peli
+                "<img src='"+url+"api/peliculas/"+proyeccion.pelicula.id+"/imagen'>" + // Debemos de adjuntar la img de la peli
             "</div>" +
             "<div class = 'content'>" +
               "<h2> " + proyeccion.pelicula.nombre + "</h2>" +

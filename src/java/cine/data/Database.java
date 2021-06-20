@@ -37,11 +37,10 @@ public class Database {
             String port="3306";
             String user="root";
 
-            String password= "Root";
-            //String password= "admin1907";   
+            //String password= "Root";
+            String password= "admin1907";   
 
             //String password= "Root";
-//            String password= "admin1907";   
 
             String database = "cine";
             String URL_conexion="jdbc:mysql://"+ server+":"+port+"/"+
