@@ -38,18 +38,25 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 @Path("/peliculas")
 public class Peliculas {
 
+<<<<<<< HEAD
 //    String location="C:/Users/emanuelle/Desktop/pruebas/";
+=======
+    String location="C:/Users/emanuelle/Desktop/pruebas/";
+>>>>>>> 82ec90a02426de1ee6b7120ed6a3906e271caeb9
     //String location="C:/Users/ESCINF/Desktop/pruebas/";
 
 
 //    String location="C:/Users/emanuelle/Desktop/pruebas/";
-    String location="C:/Users/ESCINF/Desktop/Proyecto 2 - PrograIV";
+   // String location="C:/Users/ESCINF/Desktop/Proyecto 2 - PrograIV";
     
 
     //String location="C:/Users/emanuelle/Desktop/pruebas/";
 //    String location="C:/Users/ESCINF/Desktop/pruebas/";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 82ec90a02426de1ee6b7120ed6a3906e271caeb9
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<Pelicula> search(@DefaultValue("") @QueryParam("nombre") String nombre) { 

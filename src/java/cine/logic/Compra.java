@@ -7,28 +7,29 @@ package cine.logic;
 
 /**
  *
- * @author ESCINF
+ * @author emanuelle
  */
-public class Pelicula {
+public class Compra {
     int id;
-    int precio;
+    String cedula;
     String nombre;
-    String estado;
-    
-    public Pelicula(int id, int precio, String nombre, String estado) {
+    //Proyeccion proyeccion;
+    int idProyeccion;
+
+    public Compra(int id, String cedula, String nombre, int idProyeccion) {
         this.id = id;
-        this.precio = precio;
+        this.cedula = cedula;
         this.nombre = nombre;
-        this.estado = estado;
+        this.idProyeccion = idProyeccion;
     }
     
-    public Pelicula() {
+    public Compra() {
         this.id = 0;
-        this.precio = 0;
+        this.cedula = "";
         this.nombre = "";
-        this.estado = "";
+        this.idProyeccion = 0;
     }
-    
+
     public int getId() {
         return id;
     }
@@ -37,12 +38,12 @@ public class Pelicula {
         this.id = id;
     }
 
-    public int getPrecio() {
-        return precio;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getNombre() {
@@ -53,11 +54,14 @@ public class Pelicula {
         this.nombre = nombre;
     }
 
-    public String getEstado() {
-        return estado;
+    public int getidProyeccion() {
+        return idProyeccion;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setidProyeccion(int idProyeccion) {
+        this.idProyeccion = idProyeccion;
     }
+    
+    
+    
 }
