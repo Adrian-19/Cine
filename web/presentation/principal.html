@@ -22,6 +22,7 @@ and open the template in the editor.
         <script src="../js/peliculas/peliculas.js"></script>
         <script src="../js/login.js"></script>
         <script src="../js/registroSala/registroSala.js"></script>
+        <script src="../js/ejecutarCompra/ejecutarCompra.js"></script>
     </head>
     <body>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -159,7 +160,7 @@ and open the template in the editor.
                     </form>
                     <div class="modal-footer d-flex justify-content-center">
                         <div>
-                            <input type="button" id="registrar-asientos" class="btn btn-primary btn-lg btn-block" value="Registrar">
+                            <input type="button" id="registrar-asientos" class="btn btn-primary btn-lg btn-block" value="Continuar">
                         </div>
                     </div>
                 </div>         
@@ -233,6 +234,46 @@ and open the template in the editor.
                         <div class="modal-footer d-flex justify-content-center">
                             <div>
                                 <input type="button" id="registrarSala" class="btn btn-primary btn-lg btn-block" value="Login">
+                            </div>
+                        </div>
+                    </form>                 
+                </div>         
+            </div>
+            <div id="addErrorDivRegSala" style="width:30%; margin: auto;"></div>              
+        </div>
+        
+        <div class="modal fade" id="add-modal-compra" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 400px">
+                <div class="modal-content">
+                    <div class="modal-header" >
+                        <div class="d-flex justify-content-center" style="width: 90%">  
+                            <img class="img-circle" id="img_logo" src="/Cine/imagenes/salaIcon.png" style="max-width: 50px; max-height: 50px"> 
+                        </div>
+                        <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
+                    </div> 
+                    <form id="formularioCompra" >
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" ></div>
+                                <span id="text-login-msg">Realizar Compra</span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="cedulaCompra">Cedula</label>
+                                <input type="text" class="form-control" name="cedulaCompra" id="cedulaCompra" placeholder="Cedula del comprador">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreCompra">Nombre</label>
+                                <input type="text" class="form-control" name="nombreCompra" id="nombreCompra" placeholder="Nombre del comprador">
+                            </div>  
+                            <div class="form-group">
+                                <label for="tarjetaCompra">Numero de Tarjeta</label>
+                                <input type="text" class="form-control" name="tarjetaCompra" id="tarjetaCompra" placeholder="Tarjeta del comprador">
+                            </div>  
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div>
+                                <input type="button" id="ejecutarCompra" class="btn btn-primary btn-lg btn-block" value="Comprar">
                             </div>
                         </div>
                     </form>                 

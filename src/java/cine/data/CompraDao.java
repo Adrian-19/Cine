@@ -37,7 +37,38 @@ public class CompraDao {
         return compras;
     }
     
-    
+    public int add(Compra compra) throws Exception{
+        int cont = 1;
+        
+        String sql = "insert into compra(cedula, nombre, idCliente, idProyeccion)"
+                + "values(?,?,?,?)";
+        PreparedStatement stm = Database.instance().prepareStatement(sql);
+        stm.setString(1, compra.getCedula());
+        stm.setString(2, compra.getNombre());
+        
+        if(compra.getCliente()!=null){
+            if(!compra.getCliente().getCedula().equals("")){
+                stm.setString(3, compra.getCliente().getCedula());
+            }
+            else{
+                stm.setString(3, null);
+            }
+        }
+        stm.setInt(4, compra.getProyeccion().getId());
+        int count = Database.instance().executeUpdate(stm);
+        if (count == 0) {
+            throw new Exception("Compra ya existe");
+        }
+        
+        sql = "select * from compra";
+        stm = Database.instance().prepareStatement(sql);
+        ResultSet rs =  Database.instance().executeQuery(stm);
+        while(rs.next()) {
+            Compra c = from(rs);
+            cont = c.getId();
+        }
+        return cont;
+    }   
     
     public List<Compra> compraProyeccion(int idPro) {
         List<Compra> compras = new ArrayList();

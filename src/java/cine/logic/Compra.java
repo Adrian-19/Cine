@@ -13,7 +13,8 @@ public class Compra {
     int id;
     String cedula;
     String nombre;
-    //Proyeccion proyeccion;
+    Proyeccion proyeccion;
+    Cliente cliente;
     int idProyeccion;
 
     public Compra(int id, String cedula, String nombre, int idProyeccion) {
@@ -27,6 +28,8 @@ public class Compra {
         this.id = 0;
         this.cedula = "";
         this.nombre = "";
+        proyeccion = new Proyeccion();
+        cliente = new Cliente();
         this.idProyeccion = 0;
     }
 
@@ -60,6 +63,22 @@ public class Compra {
 
     public void setidProyeccion(int idProyeccion) {
         this.idProyeccion = idProyeccion;
+    }
+
+    public Proyeccion getProyeccion() {
+        return proyeccion;
+    }
+
+    public void setProyeccion(Proyeccion proyeccion) {
+        this.proyeccion = proyeccion;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
     
     

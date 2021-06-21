@@ -17,11 +17,25 @@ function loginAction(){
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#add-modal-login #addErrorDivLogin"));return;}
         usuario = await response.json();
-        console.log(usuario);
-        sessionStorage.setItem('user', JSON.stringify(usuario));
-        $('#add-modal-login').modal('hide');
-        document.location = url + "presentation/principal.html";                         
-    })(); 
+        sessionStorage.setItem('user', JSON.stringify(usuario));    
+        if(usuario.tipo == 0){
+            $('#add-modal-login').modal('hide');
+            document.location = url + "presentation/principal.html";     
+        }
+        if(usuario.tipo == 1){
+            let request = new Request(url+'api/login', {method: 'GET', headers: {}});
+            (async ()=>{
+                const response = await fetch(request);
+                cliente = await response.json();
+                sessionStorage.setItem('persona', JSON.stringify(cliente));
+                $('#add-modal-login').modal('hide');
+                document.location = url + "presentation/principal.html";                         
+            })();
+        } 
+    })();
+    
+    
+    
 }
 
 function logoutAction(){

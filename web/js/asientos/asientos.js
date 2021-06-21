@@ -10,9 +10,11 @@ function render_asientos() {
     var cont = 1;
     var panel = $('#panel-asientos');
     cargarFilas(panel, cont);
+    console.log("Render asientos");
+    $("#registrar-asientos").on("click",()=>{renderCompra(selec, proyeccion);});
     $('#add-modal-asientos').modal('show');
     cargado = true;
-
+    
 }
 
 
@@ -122,8 +124,3 @@ function loaded_asientos() {
 }
 
 $(loaded_asientos);
-
-
-
-
-

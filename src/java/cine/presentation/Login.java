@@ -5,6 +5,7 @@
  */
 package cine.presentation;
 
+import cine.logic.Cliente;
 import cine.logic.Usuario;
 import java.util.List;
 import javax.ws.rs.Consumes;
@@ -42,13 +43,21 @@ public class Login {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)    
     public Usuario login(Usuario usuario) {  
-            Usuario logged=null;
+            Usuario logged = null;
+            Cliente cliente = null;
             
+            // Administrador admin = null;
             try {
                 logged = cine.logic.Service.instance().getUsuario(usuario.getCedula());
                 if(!logged.getClave().equals(usuario.getClave())) throw new Exception("Clave incorrecta");
+                if(logged.getTipo() == 0){
+                    //  admin = cine.logic.Service.instance().getAdmin(usuario.getCedula());
+                }
+                else{
+                    cliente = cine.logic.Service.instance().getCliente(logged.getCedula());
+                    request.getSession(true).setAttribute("persona", cliente);
+                }
                 
-                //request.getSession(true).setAttribute("persona", logged);
                 request.getSession(true).setAttribute("user", logged);
                 return logged;
             } catch (Exception ex) {
@@ -56,10 +65,21 @@ public class Login {
             }  
     }
     
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Cliente getCliente(){
+        HttpSession session = request.getSession(true);
+        Cliente c = (Cliente)session.getAttribute("persona");
+        return c;
+    }
+    
+    
+    
     @DELETE 
     public void logout() {  
         HttpSession session = request.getSession(true);
-        session.removeAttribute("user");           
+        session.removeAttribute("user");
+        session.removeAttribute("persona");
         session.invalidate();
     }
 }

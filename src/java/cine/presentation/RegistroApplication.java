@@ -22,6 +22,7 @@ public class RegistroApplication extends Application {
         classes.add(Peliculas.class);
         classes.add(Login.class);
         classes.add(Salas.class);
+        classes.add(Compras.class);
         return classes;
     }   
 }
