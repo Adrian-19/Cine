@@ -41,4 +41,17 @@ public class UsuarioDao {
             return null;
         }
     }
+    
+    public void create(Usuario u) throws Exception {
+        String sql = "insert into usuario (cedula, clave, tipo)   " + 
+                "values(?,?,?)"; 
+        PreparedStatement stm = Database.instance().prepareStatement(sql); 
+        stm.setString(1, u.getCedula());
+        stm.setString(2, u.getClave());
+        stm.setInt(3, u.getTipo()); //
+        int count = Database.instance().executeUpdate(stm);
+        if (count == 0) {
+            throw new Exception("Usuario ya existe");
+        }
+    }
 }

@@ -1,7 +1,8 @@
 var fila_asientos = 6;
 var colum_asientos = 8;
 var num_asi = 1;
-var proyeccion = { asientos:[], fecha:"21 mayo", hora:"2 pm", id:2, pelicula:{estado:"En Cartelera",id:2,nombre:"Shrek",precio:3000},sala:{id:1,numeroSala:"5"}};
+var proyeccion = { asientos:[], fecha:"21 mayo", hora:"2 pm", id:2, pelicula:{estado:"En Cartelera",id:2,nombre:"Shrek",precio:3000},sala:{cantidadFilas:9,id:1,numeroSala:"5"}};
+
 var selec = new Array();
 var cargado = false;
 
@@ -14,8 +15,21 @@ function render_asientos() {
     $("#registrar-asientos").on("click",()=>{renderCompra(selec, proyeccion);});
     $('#add-modal-asientos').modal('show');
     cargado = true;
+<<<<<<< HEAD
+=======
+    $('#registrar-asientos').off('click').on('click', procederCompra);
+
+}
+
+function procederCompra(){
+     $('#add-modal-asientos').modal('hide');  
+    //Aqui metodo de compra que recibe los parametros:
+    //selec = lista de asientos seleccionados y proyeccion = la proyeccion asignada la compra
+>>>>>>> 6bdf50d8424ef0ccf0cb0f4f67c07ddbead6eca6
     
 }
+
+
 
 
 function cargarAsientos(fila) {
@@ -64,7 +78,7 @@ function cargarAsientos(fila) {
 
 function cargarFilas(panel) {
     num_asi = 1;
-    for (var i = 0; i < fila_asientos; i++) {
+    for (var i = 0; i < proyeccion.sala.cantidadFilas; i++) {
         var div = $("<div />");
         div.addClass("fila");
         cargarAsientos(div);
@@ -108,6 +122,7 @@ function cargarFilas(panel) {
 
 function reset_asientos() {
     $(".fila").remove();
+    selec = new Array();
 }
 
 

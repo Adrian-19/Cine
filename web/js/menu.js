@@ -47,10 +47,18 @@ var menu = `
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
-                  
+<<<<<<< HEAD
+ 
+                   <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"  href="#" id="registerClient">Registrarse </a>
+                  </li>
+ 
+ 
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="ver-asientos">Ver asientos</a>
                   </li>
+=======
+>>>>>>> 82ec90a02426de1ee6b7120ed6a3906e271caeb9
                   `;
                 }
                   

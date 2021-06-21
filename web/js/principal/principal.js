@@ -36,8 +36,10 @@ function rowProyeccion(listado, proyeccion){
         }
     }
     else{
-        $('#pel' + proyeccion.pelicula.id).append("<li><a href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
+        $('#pel' + proyeccion.pelicula.id).append("<li><a id = 'pro"+proyeccion.id +"' href = '#'> " + proyeccion.fecha +  " " + proyeccion.hora + " / " + proyeccion.sala.numeroSala +
                 "</a></li>");
+        
+        $("#pro"+proyeccion.id).on("click",()=>{makenew_asientos(proyeccion);});
         
     }
 }

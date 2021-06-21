@@ -131,55 +131,93 @@ public class Controller extends HttpServlet {
 
 
             for (Tiquete t : tiquetes) {
-               Paragraph  titulo = new Paragraph("Cedula : " + compraSelec.getCedula(),
+                Paragraph  titulo = new Paragraph("=========================================" ,
                         FontFactory.getFont("arial",
                                 14,
+                                Font.BOLD,
+                                BaseColor.BLACK
+                        )
+                );
+                document.add(titulo);
+                
+                titulo = new Paragraph("                        GNC        ",
+                        FontFactory.getFont("arial",
+                                22,
                                 Font.BOLD,
                                 BaseColor.BLUE
                         )
                 );
                 document.add(titulo);
-                titulo = new Paragraph("Nombre : " + compraSelec.getNombre(),
-                        FontFactory.getFont("arial",
+                                
+                titulo = new Paragraph(" ",
+                        FontFactory.getFont("Times New Roman",
                                 14,
                                 Font.BOLD,
-                                BaseColor.BLUE
+                                BaseColor.BLACK
                         )
                 );
                 document.add(titulo);
+                
+                
+                
+               titulo = new Paragraph("Cedula : " + compraSelec.getCedula()+"                      Nombre : " + compraSelec.getNombre(),
+                        FontFactory.getFont("Times New Roman",
+                                12,
+                                Font.BOLD,
+                                BaseColor.BLACK
+                        )
+                );
+
+                document.add(titulo);               
+                titulo = new Paragraph("Codigo de tiquete : " + t.getId()+ "       Precio : " + proyec.getPelicula().getPrecio(),
+                        FontFactory.getFont("Times New Roman",
+                                12,
+                                Font.BOLD,
+                                BaseColor.BLACK
+                        )
+                );
+//                
+                document.add(titulo);            
                 
                 titulo = new Paragraph("Pelicula : " + proyec.getPelicula().getNombre(),
-                        FontFactory.getFont("arial",
-                                14,
+                        FontFactory.getFont("Times New Roman",
+                                18,
                                 Font.BOLD,
-                                BaseColor.BLUE
+                                BaseColor.BLACK
                         )
                 );
 //                
                 document.add(titulo);
                 
-                titulo = new Paragraph("Precio : " + proyec.getPelicula().getPrecio(),
-                        FontFactory.getFont("arial",
-                                14,
+
+
+                titulo = new Paragraph("Numero de asiento : " + t.getNumeroAsiento()+"   Numero de sala : " +proyec.getSala().getNumeroSala(),
+                        FontFactory.getFont("Times New Roman",
+                                16,
                                 Font.BOLD,
-                                BaseColor.BLUE
-                        )
-                );
-//                
-                document.add(titulo);
-                 titulo = new Paragraph("Codigo de tiquete : " + t.getId(),
-                        FontFactory.getFont("arial",
-                                14,
-                                Font.BOLD,
-                                BaseColor.BLUE
+                                BaseColor.BLACK
                         )
                 );
                 document.add(titulo);
-                titulo = new Paragraph("Numero de asiento : " + t.getNumeroAsiento(),
-                        FontFactory.getFont("arial",
+                                
+                
+                titulo = new Paragraph("Fecha : " + proyec.getFecha()+"                   Hora : " +proyec.getHora(),
+                        FontFactory.getFont("Times New Roman",
+                                16,
+                                Font.BOLD,
+                                BaseColor.BLACK
+                        )
+                );
+                
+                
+                document.add(titulo);
+                
+                
+                titulo = new Paragraph(" ",
+                        FontFactory.getFont("Times New Roman",
                                 14,
                                 Font.BOLD,
-                                BaseColor.BLUE
+                                BaseColor.BLACK
                         )
                 );
                 document.add(titulo);
