@@ -32,7 +32,12 @@ var menu = `
                     `;
                   }
                   if([1].includes(usuario.tipo)){
+                    let personaJson = sessionStorage.getItem('persona');
+                    let persona= JSON.parse(personaJson);  
                     menu+=`
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">${persona.nombre}</a>
+                    </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#" id="verCompras">Mis compras</a>
                     </li>
@@ -47,18 +52,10 @@ var menu = `
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
-<<<<<<< HEAD
  
                    <li class="nav-item">
                     <a class="nav-link active" aria-current="page"  href="#" id="registerClient">Registrarse </a>
                   </li>
- 
- 
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="ver-asientos">Ver asientos</a>
-                  </li>
-=======
->>>>>>> 82ec90a02426de1ee6b7120ed6a3906e271caeb9
                   `;
                 }
                   

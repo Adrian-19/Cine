@@ -15,19 +15,17 @@ function render_asientos() {
     $("#registrar-asientos").on("click",()=>{renderCompra(selec, proyeccion);});
     $('#add-modal-asientos').modal('show');
     cargado = true;
-<<<<<<< HEAD
-=======
-    $('#registrar-asientos').off('click').on('click', procederCompra);
+//<<<<<<< HEAD
+//=======
+//    $('#registrar-asientos').off('click').on('click', procederCompra);
 
 }
 
-function procederCompra(){
-     $('#add-modal-asientos').modal('hide');  
-    //Aqui metodo de compra que recibe los parametros:
-    //selec = lista de asientos seleccionados y proyeccion = la proyeccion asignada la compra
->>>>>>> 6bdf50d8424ef0ccf0cb0f4f67c07ddbead6eca6
-    
-}
+//function procederCompra(){
+//     $('#add-modal-asientos').modal('hide');  
+//    //Aqui metodo de compra que recibe los parametros:
+//    //selec = lista de asientos seleccionados y proyeccion = la proyeccion asignada la compra
+//}
 
 
 
