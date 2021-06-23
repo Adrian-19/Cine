@@ -82,7 +82,8 @@ public class ProyeccionDao {
             return null;
         }
     }
-        public Proyeccion read(int id) throws Exception{
+    
+    public Proyeccion read(int id) throws Exception{
         String sql="select * from proyeccion where id=?";
         PreparedStatement stm = Database.instance().prepareStatement(sql);
         stm.setInt(1, id);
@@ -101,4 +102,23 @@ public class ProyeccionDao {
             throw new Exception ("Pelicula no Existe");
         }
     }
+
+    public void create(Proyeccion p) throws Exception {
+        String sql = "insert into proyeccion (fecha, hora, idPelicula, idSala)   " + 
+        "values(?,?,?, ?)"; 
+        PreparedStatement stm = Database.instance().prepareStatement(sql); 
+        stm.setString(1, p.getFecha());
+        stm.setString(2, p.getHora());
+        stm.setInt(3, p.getPelicula().getId()); 
+        stm.setInt(4,p.getSala().getId()); 
+        
+        int count = Database.instance().executeUpdate(stm);
+        if (count == 0) {
+            throw new Exception("Usuario ya existe");
+        }
+        
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+    
+    
 }

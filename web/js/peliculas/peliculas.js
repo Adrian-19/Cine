@@ -95,7 +95,8 @@ function registrarPelicula() {
         addImagen();
         fetchAndListP();
         resetPelicula();
-        $('#add-modal-peliculas').modal('hide');                
+        $('#add-modal-peliculas').modal('hide'); 
+        document.location = url + "presentation/RegistroPeliculas/registroPeliculas.html"; 
     })();     
     console.log(listar_usuarios());//solo para probar
 
@@ -148,9 +149,8 @@ function fetchAndListP(){
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}
         peliculas = await response.json(); 
-        //listAllP();
         list();
-        console.log(listar_usuarios());//solo para probar
+        console.log(listar_usuarios());//borrar** 
     })();    
 } 
 

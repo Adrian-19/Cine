@@ -17,17 +17,13 @@ and open the template in the editor.
          <!-- Poner los scrips abajo de esto  -->       
         <script src="../js/asientos/asientos.js"></script>
         <script src="../js/principal/principal.js"></script>
-
-<!--        <script src="../js/registro/registro.js"></script>-->
         <script src="../js/peliculas/peliculas.js"></script>
         <script src="../js/login.js"></script>
-<<<<<<< HEAD
         <script src="../js/registro/registro.js"></script>
         <script src="../js/verCompras/verCompras.js"></script>
         <script src="../js/registrarProyeccion/registrarProyeccion.js"></script>
-=======
         <script src="../js/registroSala/registroSala.js"></script>
->>>>>>> 82ec90a02426de1ee6b7120ed6a3906e271caeb9
+
     </head>
     <body>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -76,26 +72,6 @@ and open the template in the editor.
                 
             </div>
         </div>
-
-<<<<<<< HEAD
-
-
-      <!-- quitar -->
-        <div class="container pt-5">
-            <div class="container2" id="panel-pelis"></div>
-
-        </div> 
-
-        <div class="table-responsive " style="max-height: 400px; overflow: auto">
-            <table class="table table-striped table-hover">
-                <thead><tr><th scope="col">ID</th><th scope="col">Nombre</th><th scope="col">Precio</th><th scope="col">Estado</th><th scope="col">Foto</th><th scope="col">Editar</th></tr></thead>
-                <tbody id="tabla-pelis">
-                </tbody>
-            </table>
-        </div>
-
-
-
 
         <!-- Option : Registro Pelregistrariculas -->
         <div class="modal fade" id="add-modal-peliculas" tabindex="-1" role="dialog">
@@ -151,10 +127,6 @@ and open the template in the editor.
         </div>
         
 
-=======
-<!-- Inicio de registro de clientes  -->
->>>>>>> 82ec90a02426de1ee6b7120ed6a3906e271caeb9
-
         <!-- Option : Registro Cliente -->
         <div class="modal fade" id="add-modal-registrar-cli" tabindex="-1" role="dialog">
             <div class="modal-dialog" style="width: 400px">
@@ -193,7 +165,7 @@ and open the template in the editor.
                     </form>                 
                 </div>         
             </div>
-            <div id="addErrorDiv" style="width:30%; margin: auto;"></div>              
+            <div id="addErrorDivRegCli" style="width:30%; margin: auto;"></div>              
         </div>
 
 
@@ -315,7 +287,7 @@ and open the template in the editor.
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                             <div>
-                                <input type="button" id="registrarSala" class="btn btn-primary btn-lg btn-block" value="Login">
+                                <input type="button" id="registrarSala" class="btn btn-primary btn-lg btn-block" value="Registrar">
                             </div>
                         </div>
                     </form>                 
@@ -327,23 +299,23 @@ and open the template in the editor.
         
     <!-- Option : Ver compras-->    
         <div class="modal fade" id="add-modal-verCompras" tabindex="-1" role="dialog">
-            <div class="modal-dialog" style="width: 500px">
+            <div class="modal-dialog" style="max-width: 900px; max-height: 900px">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="/Cine/imagenes/verCompras.jpg" style="max-width: 90px; max-height: 90px"> </div>
+                        <div class="d-flex justify-content-center" style="width: 100%">  <img class="img-circle" id="img_logo" src="/Cine/imagenes/verCompras.jpg" style="max-width: 100px; max-height: 100px"> </div>
                         <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
                     </div>  
                     <div class="modal-body">
-                        <div id="div-login-msg">
+                        <div id="div-login-msg" class = "text-center">
                             <div id="icon-login-msg" ></div>
-                            <span id="text-login-msg">Mis compras</span>
+                            <span  id="text-login-msg">Mis compras</span>
                         </div>
                         <br>                        
                         
-                        <div class="table-responsive " style="max-height: 400px; overflow: auto">
-                           <table class="table table-striped table-hover">
-                               <thead><tr> <th scope="col">Código</th> <th scope="col">Película</th><th scope="col">Sala</th><th scope="col">Fecha</th><th scope="col">Hora</th><th scope="col">Tiquetes</th>   </tr></thead>
-                               <tbody id="tabla-verCompras">
+                        <div class="table-responsive " style="max-height: 600px; overflow: auto">
+                           <table class="table table-striped table-hover text-sm-center">
+                               <thead ><tr> <th scope="col">Código de Compra</th> <th scope="col">Fecha</th><th scope="col">Hora</th><th scope="col">No. Sala</th> <th scope="col">Nombre Película</th>  <th scope="col">Precio</th>      </tr></thead>
+                               <tbody id="tabla-verCompras" >
                                </tbody>
                            </table>
                        </div>  
@@ -352,6 +324,7 @@ and open the template in the editor.
         
                 </div>         
             </div>
+            <div id="addErrorDivRVerCompras" style="width:30%; margin: auto;"></div> 
         </div> 
 
     
@@ -364,7 +337,7 @@ and open the template in the editor.
                         <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="/Cine/imagenes/proyeccion.png" style="max-width: 80px; max-height: 80px"> </div>
                         <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
                     </div> 
-                    <form id="formulario-registrar-cli" >
+                    <form id="formulario-registrar-proy" >
                         <div class="modal-body">
                             <div id="div-login-msg">
                                 <div id="icon-login-msg" ></div>
@@ -375,47 +348,41 @@ and open the template in the editor.
                             <div class="form-group">
                                 <label for="idProyeccion">ID Proyección</label>
                                 <input type="text" class="form-control" name="idProyeccion" id="idProyeccion" placeholder="ID">
-                            </div>
+                            </div>  
 
                             <div class="form-group">
                                 <label for="fechaProyeccion">Fecha de la proyección</label>
-                                <input type="text" class="form-control" name="fechaProyeccion" id="fechaProyeccion" placeholder="Fecha de la proyección">
+                                <input type="date" class="form-control" name="fechaProyeccion" id="fechaProyeccion" placeholder="Fecha de la proyección">
                             </div>     
                             
                             <div class="form-group">
                                 <label for="horaProyeccion">Hora de la proyección</label>
-                                <input type="text" class="form-control" name="horaProyeccion" id="horaProyeccion" placeholder="Fecha de la proyección">
+                                <input type="time" class="form-control" name="horaProyeccion" id="horaProyeccion" placeholder="Fecha de la proyección">
                             </div>  
                             
                             <div class="form-group">
                                 <label for="peliProyeccion">Seleccionar película</label>
                                 <select name="peliProyeccion" id="peliProyeccion" class="form-control" >
-                                    
-                                    <!-- Cargar esto desde JS -->
-                                    <!-- <option value="ID de la película" selected="">Nombre de la película </option> -->
-                                    
+                                    <!-- Cargar con  JS -->
                                 </select>
                             </div>     
                             <div class="form-group">
                                 <label for="salaProyeccion">Seleccionar sala</label>
                                 <select name="salaProyeccion" id="salaProyeccion" class="form-control" >
-                                    
-                                    <!-- Cargar esto desde JS -->
-                                    <!-- <option value="ID de la SALA" selected="">Número de sala </option> -->
-                                    
+                                    <!-- Cargar con JS -->
                                 </select>
                             </div>                             
      
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                             <div>
-                                <input type="button" id="registrarse" class="btn btn-primary btn-lg btn-block" value="Registrar">
+                                <input type="button" id="registrarProyeccion" class="btn btn-primary btn-lg btn-block" value="Registrar">
                             </div>
                         </div>
                     </form>                 
                 </div>         
             </div>
-            <div id="addErrorDiv" style="width:30%; margin: auto;"></div>              
+            <div id="addErrorDivRegistrarProyeccion" style="width:30%; margin: auto;"></div>              
         </div>   
     
     

@@ -41,4 +41,15 @@ public class Salas {
             throw new NotAcceptableException(); 
         }
     }
+    
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public List<Sala> findAll( @DefaultValue("") @QueryParam("nombre") String nombre) {   
+        try {
+             cine.logic.Service service = cine.logic.Service.instance();
+             return service.findAllSalas(); 
+        } catch (Exception ex) {
+            throw new NotAcceptableException(); 
+        }
+    } 
 }

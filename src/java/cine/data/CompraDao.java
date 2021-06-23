@@ -86,4 +86,26 @@ public class CompraDao {
         }
     }
     
+    
+    public List<Compra> compraPorCliente(int idCli) {
+        List<Compra> compras = new ArrayList();
+        try {
+            
+            String sql="select * from compra where idCliente=?";
+            PreparedStatement stm = Database.instance().prepareStatement(sql);
+            stm.setInt(1, idCli);
+            ResultSet rs =  Database.instance().executeQuery(stm);
+            while(rs.next()) {
+                Compra c = from(rs);
+                compras.add(c);
+            }
+            
+        } catch (Exception ex) {
+            
+        }
+        return compras;
+    }
+    
+
+    
 }

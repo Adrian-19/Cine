@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `Cine`.`Compra` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `cedula` VARCHAR(45) NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
-  `idCliente` VARCHAR(45) NOT NULL,
+  `idCliente` VARCHAR(45) NULL,
   `idProyeccion` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Compra_Cliente1_idx` (`idCliente` ASC) VISIBLE,
@@ -119,7 +119,7 @@ ENGINE = InnoDB;
 -- Table `Cine`.`Tiquete`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Cine`.`Tiquete` (
-  `numero` INT NOT NULL,
+  `numero` INT NOT NULL AUTO_INCREMENT,
   `numeroButaca` INT NULL,
   `idCompra` INT NOT NULL,
   PRIMARY KEY (`numero`),

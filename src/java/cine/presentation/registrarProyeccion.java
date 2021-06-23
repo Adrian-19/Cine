@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cine.presentation;
+import cine.logic.Proyeccion;
 import cine.logic.Usuario;
 import java.util.List;
 import javax.ws.rs.Consumes;
@@ -37,7 +38,34 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
  * @author DS
  */
 
+@Path("/registrarProyeccion")
+public class RegistrarProyeccion {
 
-public class registrarProyeccion {
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON) 
+    public void add(Proyeccion p) {
+        System.out.println(p.getId() + p.getPelicula().getId() + p.getFecha() + p.getHora());
+         try {
+             cine.logic.Service service = cine.logic.Service.instance();
+             service.addProyeccion(p);
+             
+        } catch (Exception ex) {
+            throw new NotAcceptableException(); 
+        }      
+    }
+    
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public List<Proyeccion> findAll() { 
+        try {
+            cine.logic.Service service = cine.logic.Service.instance();
+            return service.getListaProyecciones();
+        } catch (Exception ex) {
+            throw new NotAcceptableException(); 
+        }  
+
+    }     
+
+
     
 }
