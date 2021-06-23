@@ -29,6 +29,7 @@ public class ClienteDao {
         }
     }
     
+    
     public Cliente from(ResultSet rs){
         try{
             Cliente c = new Cliente();

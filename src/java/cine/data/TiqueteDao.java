@@ -57,11 +57,7 @@ public class TiqueteDao {
         }
         return asientos;
     }
-    
-    
-    
-    
-        public Tiquete read(int id) throws Exception{
+    public Tiquete read(int id) throws Exception{
         String sql="select * from tiquete where numero=?";
         PreparedStatement stm = Database.instance().prepareStatement(sql);
         stm.setInt(1, id);
@@ -75,6 +71,17 @@ public class TiqueteDao {
         }
     }
     
+    public void add(Tiquete t) throws Exception{
+        String sql = "insert into tiquete(numeroButaca, idCompra) values(?,?)";
+        PreparedStatement stm = Database.instance().prepareStatement(sql);
+        stm.setInt(1, t.getNumeroAsiento());
+        stm.setInt(2, t.getIdCompra());
+        int count = Database.instance().executeUpdate(stm);
+        if (count == 0) {
+            throw new Exception("Tiquete ya existe");
+        }
+    }
+        
     public Tiquete from(ResultSet rs){
         try{
             Tiquete t = new Tiquete();

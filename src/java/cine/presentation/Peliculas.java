@@ -40,6 +40,10 @@ public class Peliculas {
 
     String location="C:/Users/ESCINF/Desktop/pruebas/";
 //    String location="C:/Users/emanuelle/Desktop/pruebas/";
+<<<<<<< HEAD
+=======
+    //String location="C:/Users/ESCINF/Desktop/Proyecto 2 - PrograIV";
+>>>>>>> b54e76ca0f31945a88861c96017809db947a6329
 
 
     @GET

@@ -35,7 +35,7 @@ public class Principal {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public List<Proyeccion> search(@DefaultValue("") @QueryParam("nombre") String nombre) {
-        System.out.println("wtf??");
+        
         List<Proyeccion> list = new ArrayList<>();
         cine.logic.Service service = cine.logic.Service.instance();
         if(nombre.equals("")){

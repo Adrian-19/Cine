@@ -7,7 +7,6 @@ var menu = `
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">`;
-
                 let usuarioJson = sessionStorage.getItem('user');
                 
                 if (usuarioJson!=null){ 
@@ -34,7 +33,12 @@ var menu = `
                     `;
                   }
                   if([1].includes(usuario.tipo)){
+                    let personaJson = sessionStorage.getItem('persona');
+                    let persona= JSON.parse(personaJson);  
                     menu+=`
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">${persona.nombre}</a>
+                    </li>
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#" id="verCompras">Mis compras</a>
                     </li>
@@ -49,13 +53,19 @@ var menu = `
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b54e76ca0f31945a88861c96017809db947a6329
  
                    <li class="nav-item">
                     <a class="nav-link active" aria-current="page"  href="#" id="registerClient">Registrarse </a>
                   </li>
+<<<<<<< HEAD
  
 
+=======
+>>>>>>> b54e76ca0f31945a88861c96017809db947a6329
                   `;
                 }
                   

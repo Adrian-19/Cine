@@ -57,6 +57,7 @@ public class Service {
         compraDao = new CompraDao();
         tiqueteDao = new TiqueteDao();
         salaDao = new SalaDao();
+        clienteDao = new ClienteDao();
     }
 
     // ------------ PROYECCIONES -------------
@@ -146,16 +147,36 @@ public class Service {
         List<Compra> arr =  compraDao.listAll();
         return arr;
     }
+<<<<<<< HEAD
     
     public List<Compra> compraPorCliente(int id) {
         return compraDao.compraPorCliente(id); 
 
     }
     
+=======
+        
+    public int registrarCompra(Compra c){
+       try {
+            return compraDao.add(c);
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       return 0;
+    }
+>>>>>>> b54e76ca0f31945a88861c96017809db947a6329
     //------------ Tiquetes -------------
     public List<Tiquete> getListaTiquetesCompra(int idCom) {
         List<Tiquete> arr =  tiqueteDao.tiquetesCompra(idCom);
         return arr;
+    }
+    
+    public void addTiquete(Tiquete t){
+        try {
+            tiqueteDao.add(t);
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     // ------------ SALAS -------------

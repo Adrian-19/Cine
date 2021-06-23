@@ -11,18 +11,21 @@ function render_asientos() {
     var cont = 1;
     var panel = $('#panel-asientos');
     cargarFilas(panel, cont);
+    console.log("Render asientos");
+    $("#registrar-asientos").on("click",()=>{renderCompra(selec, proyeccion);});
     $('#add-modal-asientos').modal('show');
     cargado = true;
-    $('#registrar-asientos').off('click').on('click', procederCompra);
+//<<<<<<< HEAD
+//=======
+//    $('#registrar-asientos').off('click').on('click', procederCompra);
 
 }
 
-function procederCompra(){
-     $('#add-modal-asientos').modal('hide');  
-    //Aqui metodo de compra que recibe los parametros:
-    //selec = lista de asientos seleccionados y proyeccion = la proyeccion asignada la compra
-    
-}
+//function procederCompra(){
+//     $('#add-modal-asientos').modal('hide');  
+//    //Aqui metodo de compra que recibe los parametros:
+//    //selec = lista de asientos seleccionados y proyeccion = la proyeccion asignada la compra
+//}
 
 
 
@@ -134,8 +137,3 @@ function loaded_asientos() {
 }
 
 $(loaded_asientos);
-
-
-
-
-
