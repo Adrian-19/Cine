@@ -15,14 +15,12 @@ public class Compra {
     int id;
     String cedula;
     String nombre;
-<<<<<<< HEAD
-=======
+
     Proyeccion proyeccion;
     Cliente cliente;
->>>>>>> b54e76ca0f31945a88861c96017809db947a6329
+
     int idProyeccion;
     
-    Proyeccion proyeccion;
     List<Tiquete> listaTiq; 
 
     public Compra(int id, String cedula, String nombre, int idProyeccion) {
@@ -81,28 +79,28 @@ public class Compra {
         return proyeccion;
     }
 
-<<<<<<< HEAD
+
     public List<Tiquete> getListaTiq() {
         return listaTiq;
     }
 
-=======
->>>>>>> b54e76ca0f31945a88861c96017809db947a6329
+
     public void setProyeccion(Proyeccion proyeccion) {
         this.proyeccion = proyeccion;
     }
 
-<<<<<<< HEAD
+
     public void setListaTiq(List<Tiquete> listaTiq) {
         this.listaTiq = listaTiq;
-=======
+    }
+
     public Cliente getCliente() {
         return cliente;
     }
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
->>>>>>> b54e76ca0f31945a88861c96017809db947a6329
+
     }
     
     

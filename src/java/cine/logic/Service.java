@@ -147,14 +147,14 @@ public class Service {
         List<Compra> arr =  compraDao.listAll();
         return arr;
     }
-<<<<<<< HEAD
+
     
     public List<Compra> compraPorCliente(int id) {
         return compraDao.compraPorCliente(id); 
 
     }
     
-=======
+
         
     public int registrarCompra(Compra c){
        try {
@@ -164,7 +164,7 @@ public class Service {
         }
        return 0;
     }
->>>>>>> b54e76ca0f31945a88861c96017809db947a6329
+
     //------------ Tiquetes -------------
     public List<Tiquete> getListaTiquetesCompra(int idCom) {
         List<Tiquete> arr =  tiqueteDao.tiquetesCompra(idCom);

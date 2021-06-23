@@ -53,19 +53,12 @@ var menu = `
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
-<<<<<<< HEAD
 
-=======
->>>>>>> b54e76ca0f31945a88861c96017809db947a6329
  
                    <li class="nav-item">
                     <a class="nav-link active" aria-current="page"  href="#" id="registerClient">Registrarse </a>
                   </li>
-<<<<<<< HEAD
- 
 
-=======
->>>>>>> b54e76ca0f31945a88861c96017809db947a6329
                   `;
                 }
                   
