@@ -5,6 +5,8 @@
  */
 package cine.logic;
 
+import java.util.List;
+
 /**
  *
  * @author emanuelle
@@ -13,15 +15,21 @@ public class Compra {
     int id;
     String cedula;
     String nombre;
+
     Proyeccion proyeccion;
     Cliente cliente;
+
     int idProyeccion;
+    
+    List<Tiquete> listaTiq; 
 
     public Compra(int id, String cedula, String nombre, int idProyeccion) {
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
         this.idProyeccion = idProyeccion;
+        this.proyeccion = null; 
+        this.listaTiq = null; 
     }
     
     public Compra() {
@@ -31,6 +39,8 @@ public class Compra {
         proyeccion = new Proyeccion();
         cliente = new Cliente();
         this.idProyeccion = 0;
+        this.proyeccion = null; 
+        this.listaTiq = null; 
     }
 
     public int getId() {
@@ -69,8 +79,19 @@ public class Compra {
         return proyeccion;
     }
 
+
+    public List<Tiquete> getListaTiq() {
+        return listaTiq;
+    }
+
+
     public void setProyeccion(Proyeccion proyeccion) {
         this.proyeccion = proyeccion;
+    }
+
+
+    public void setListaTiq(List<Tiquete> listaTiq) {
+        this.listaTiq = listaTiq;
     }
 
     public Cliente getCliente() {
@@ -79,6 +100,7 @@ public class Compra {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+
     }
     
     

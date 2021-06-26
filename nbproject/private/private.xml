@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/presentation/Tiquetes/View.jsp</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/principal/principal.js</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/css/style.css</file>
@@ -28,6 +29,14 @@
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/presentation/login.html</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/registroSala/registroSala.js</file>
             <file>file:/C:/Users/emanuelle/Desktop/Proyecto%202/Cine/web/js/registrarProyeccion/registrarProyeccion.js</file>
+=======
+            <file>file:/C:/Users/ESCINF/Desktop/Proyecto%202%20-%20PrograIV/Cine/web/presentation/Tiquetes/View.jsp</file>
+            <file>file:/C:/Users/ESCINF/Desktop/Proyecto%202%20-%20PrograIV/Cine/src/java/cine/logic/Service.java</file>
+            <file>file:/C:/Users/ESCINF/Desktop/Proyecto%202%20-%20PrograIV/Cine/src/java/cine/data/TiqueteDao.java</file>
+            <file>file:/C:/Users/ESCINF/Desktop/Proyecto%202%20-%20PrograIV/Cine/web/presentation/principal.html</file>
+            <file>file:/C:/Users/ESCINF/Desktop/Proyecto%202%20-%20PrograIV/Cine/web/js/menu.js</file>
+            <file>file:/C:/Users/ESCINF/Desktop/Proyecto%202%20-%20PrograIV/Cine/web/js/login.js</file>
+>>>>>>> b9b0d3da32a24b04703cf2da1f23f946853d2426
         </group>
     </open-files>
 </project-private>

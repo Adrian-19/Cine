@@ -40,4 +40,17 @@ public class ClienteDao {
             return null;
         }
     }
+    
+    public void create(Cliente c) throws Exception {
+        String sql = "insert into cliente (cedula, nombre, idUsuario)   " + 
+                "values(?,?,?)"; 
+        PreparedStatement stm = Database.instance().prepareStatement(sql); 
+        stm.setString(1, c.getCedula());
+        stm.setString(2, c.getNombre());
+        stm.setInt(3, Integer.parseInt(c.getCedula())); //
+        int count = Database.instance().executeUpdate(stm);
+        if (count == 0) {
+            throw new Exception("Usuario ya existe");
+        }
+    }
 }

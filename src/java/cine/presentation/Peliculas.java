@@ -34,9 +34,14 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 @Path("/peliculas")
 public class Peliculas {
 
+<<<<<<< HEAD
     //String location="C:/Users/ESCINF/Desktop/pruebas/";
     String location="C:/Users/emanuelle/Desktop/pruebas/";
     //String location="C:/Users/ESCINF/Desktop/Proyecto 2 - PrograIV";
+=======
+    String location="C:/Users/ESCINF/Desktop/pruebas/";
+//    String location="C:/Users/emanuelle/Desktop/pruebas/";
+>>>>>>> b9b0d3da32a24b04703cf2da1f23f946853d2426
 
 
     @GET

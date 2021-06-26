@@ -20,10 +20,11 @@
     <script src="/Cine/js/principal/principal.js"></script>
     <!--        <script src="../js/registro/registro.js"></script>-->
     <script src="/Cine/js/registroSala/registroSala.js"></script>
+    <script src="/Cine/js/registrarProyeccion/registrarProyeccion.js"></script>
      <script src="/Cine/js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
+    
 
 </head>
 <body>
@@ -210,7 +211,7 @@
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <div>
-                            <input type="button" id="registrarSala" class="btn btn-primary btn-lg btn-block" value="Login">
+                            <input type="button" id="registrarSala" class="btn btn-primary btn-lg btn-block" value="Registrar">
                         </div>
                     </div>
                 </form>                 
@@ -218,6 +219,65 @@
         </div>
         <div id="addErrorDivRegSala" style="width:30%; margin: auto;"></div>              
     </div>
+    
+    
+    <!-- Option : Registrar proyección -->  
+    
+        <div class="modal fade" id="add-modal-registrar-proy" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 400px">
+                <div class="modal-content">
+                    <div class="modal-header" >
+                        <div class="d-flex justify-content-center" style="width: 90%">  <img class="img-circle" id="img_logo" src="/Cine/imagenes/proyeccion.png" style="max-width: 80px; max-height: 80px"> </div>
+                        <div > <button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button> </div>
+                    </div> 
+                    <form id="formulario-registrar-proy" >
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" ></div>
+                                <span id="text-login-msg">Registrar Proyección</span>
+                            </div>
+                            <br>
+                            
+                            <div class="form-group">
+                                <label for="idProyeccion">ID Proyección</label>
+                                <input type="text" class="form-control" name="idProyeccion" id="idProyeccion" placeholder="ID">
+                            </div>  
+
+                            <div class="form-group">
+                                <label for="fechaProyeccion">Fecha de la proyección</label>
+                                <input type="date" class="form-control" name="fechaProyeccion" id="fechaProyeccion" placeholder="Fecha de la proyección">
+                            </div>     
+                            
+                            <div class="form-group">
+                                <label for="horaProyeccion">Hora de la proyección</label>
+                                <input type="time" class="form-control" name="horaProyeccion" id="horaProyeccion" placeholder="Fecha de la proyección">
+                            </div>  
+                            
+                            <div class="form-group">
+                                <label for="peliProyeccion">Seleccionar película</label>
+                                <select name="peliProyeccion" id="peliProyeccion" class="form-control" >
+                                    <!-- Cargar con  JS -->
+                                </select>
+                            </div>     
+                            <div class="form-group">
+                                <label for="salaProyeccion">Seleccionar sala</label>
+                                <select name="salaProyeccion" id="salaProyeccion" class="form-control" >
+                                    <!-- Cargar con JS -->
+                                </select>
+                            </div>                             
+     
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div>
+                                <input type="button" id="registrarProyeccion" class="btn btn-primary btn-lg btn-block" value="Registrar">
+                            </div>
+                        </div>
+                    </form>                 
+                </div>         
+            </div>
+            <div id="addErrorDivRegistrarProyeccion" style="width:30%; margin: auto;"></div>              
+        </div>   
+        
 
 
 

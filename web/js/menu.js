@@ -24,11 +24,12 @@ var menu = `
                       <a class="nav-link active" aria-current="page" href="#" id="regSala">Registrar Sala</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#" id="logoutP">Cerrar sesion</a>
-                    </li>
-                    <li class="nav-item">
                      <a class="nav-link active" href="/Cine/presentation/Tiquetes/showRecord">Tiquetes</a>
                     </li> 
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" id="logoutP">Cerrar sesion</a>
+                    </li>
+
                     `;
                   }
                   if([1].includes(usuario.tipo)){
@@ -52,10 +53,12 @@ var menu = `
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" id="loginP">Iniciar sesion</a>
                   </li>
+
  
                    <li class="nav-item">
                     <a class="nav-link active" aria-current="page"  href="#" id="registerClient">Registrarse </a>
                   </li>
+
                   `;
                 }
                   
