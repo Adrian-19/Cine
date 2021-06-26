@@ -3,20 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Tiquete.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Peliculas.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/CompraDao.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/registroCliente.java</file>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/peliculas/peliculas.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Compra.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/registrarProyeccion.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/registroSala/registroSala.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Tiquete.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/SalaDao.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/menu.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/CompraDao.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Compras.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Peliculas.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Principal.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/Database.java</file>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/TiqueteDao.java</file>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/asientos/asientos.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/menu.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/ejecutarCompra/ejecutarCompra.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/registroSala/registroSala.js</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/Compras.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/login.js</file>
             <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Service.java</file>
-            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/data/SalaDao.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/logic/Compra.java</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/web/js/ejecutarCompra/ejecutarCompra.js</file>
+            <file>file:/C:/Users/ESCINF/Documents/NetBeansProjects/Cine/src/java/cine/presentation/RegistroApplication.java</file>
         </group>
     </open-files>
 </project-private>
