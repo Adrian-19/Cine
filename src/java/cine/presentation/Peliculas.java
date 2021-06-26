@@ -5,18 +5,14 @@
  */
 package cine.presentation;
 
-import cine.logic.Service;
-import cine.logic.Model;
 import cine.logic.Pelicula;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.NotAcceptableException;
@@ -38,8 +34,8 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 @Path("/peliculas")
 public class Peliculas {
 
-    String location="C:/Users/ESCINF/Desktop/pruebas/";
-//    String location="C:/Users/emanuelle/Desktop/pruebas/";
+    //String location="C:/Users/ESCINF/Desktop/pruebas/";
+    String location="C:/Users/emanuelle/Desktop/pruebas/";
     //String location="C:/Users/ESCINF/Desktop/Proyecto 2 - PrograIV";
 
 

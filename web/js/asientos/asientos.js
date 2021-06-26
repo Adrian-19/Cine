@@ -11,24 +11,12 @@ function render_asientos() {
     var cont = 1;
     var panel = $('#panel-asientos');
     cargarFilas(panel, cont);
-    console.log("Render asientos");
     $("#registrar-asientos").on("click",()=>{renderCompra(selec, proyeccion);});
     $('#add-modal-asientos').modal('show');
     cargado = true;
-//<<<<<<< HEAD
-//=======
-//    $('#registrar-asientos').off('click').on('click', procederCompra);
+
 
 }
-
-//function procederCompra(){
-//     $('#add-modal-asientos').modal('hide');  
-//    //Aqui metodo de compra que recibe los parametros:
-//    //selec = lista de asientos seleccionados y proyeccion = la proyeccion asignada la compra
-//}
-
-
-
 
 function cargarAsientos(fila) {
 
@@ -87,37 +75,6 @@ function cargarFilas(panel) {
 
 }
 
-
-
-
-
-//function seleccionar() {
-//    if ($(this).hasClass("selected") && cargado) {
-//        var i = selec.indexOf($(this).attr("data-value"));
-//        if (i !== -1) {
-//            selec.splice(i, 1);
-//        }
-//        $(this).removeClass("selected");
-//
-//    } else {
-//        if (!$(this).hasClass("occupied") && cargado) {
-//
-//            $(this).addClass("selected");
-//            selec.push($(this).attr("data-value"));
-//        }
-//
-//    }
-//    var total = selec.length * proyeccion.precio;
-//    $('#count').text(selec.length);
-//    $('#total').text(total);
-//    console.log(JSON.stringify(selec));
-//
-//}
-
-//function load() {
-//
-//}
-
 function reset_asientos() {
     $(".fila").remove();
     selec = new Array();
@@ -126,7 +83,7 @@ function reset_asientos() {
 
 function makenew_asientos(proyec) {
     proyeccion = proyec;
-    console.log(JSON.stringify(proyeccion));
+   //console.log(JSON.stringify(proyeccion));
     reset_asientos();
     render_asientos();
 }

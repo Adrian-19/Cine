@@ -27,8 +27,8 @@ function renderPelicula() {
 
 function loadPelicula() {
     pelicula = Object.fromEntries((new FormData($("#formulario-peliculas").get(0))).entries());
-    console.log("Esta es la pelicula cargada : "+pelicula.id+" "+pelicula.precio+" "+pelicula.nombre+" "+pelicula.estado); //solo para probar
-    
+//    console.log("Esta es la pelicula cargada : "+pelicula.id+" "+pelicula.precio+" "+pelicula.nombre+" "+pelicula.estado); //solo para probar
+//    
 }
 
 function resetPelicula() {
@@ -97,7 +97,7 @@ function registrarPelicula() {
         resetPelicula();
         $('#add-modal-peliculas').modal('hide');                
     })();     
-    console.log(listar_usuarios());//solo para probar
+    //console.log(listar_usuarios());//solo para probar
 
 }
 
@@ -150,13 +150,13 @@ function fetchAndListP(){
         peliculas = await response.json(); 
         //listAllP();
         list();
-        console.log(listar_usuarios());//solo para probar
+        //console.log(listar_usuarios());//solo para probar
     })();    
 } 
 
 function buscarPelicula(){
     var busqueda = $("#busqueda").val();
-    console.log("Se realizo la siguiente busqueda: "+busqueda);
+    //console.log("Se realizo la siguiente busqueda: "+busqueda);
     let request = new Request(url+'api/peliculas?nombre='+busqueda, {method: 'GET', headers: { }});
     (async ()=>{
         const response = await fetch(request);
@@ -164,7 +164,7 @@ function buscarPelicula(){
         peliculas = await response.json(); 
         listAllP();
         list();
-        console.log(listar_usuarios());//solo para probar
+        //console.log(listar_usuarios());//solo para probar
     })();    
 }
 

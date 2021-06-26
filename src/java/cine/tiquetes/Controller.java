@@ -107,7 +107,6 @@ public class Controller extends HttpServlet {
         cine.logic.Service service = cine.logic.Service.instance();
         List<Compra> compras = service.getListaCompras() ;
         int id = Integer.parseInt(request.getParameter("numeroCompra"));
-        System.out.println("El id que se obtuvo es:" +id);
         Compra compraSelec = new Compra();
         for (Compra c : compras) {
             if (c.getId() == id) {
