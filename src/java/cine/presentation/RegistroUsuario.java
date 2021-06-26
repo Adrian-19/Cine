@@ -5,7 +5,6 @@
  */
 package cine.presentation;
 
-
 import cine.logic.Cliente;
 import cine.logic.Usuario;
 import java.util.List;
@@ -42,25 +41,22 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
  */
 
 
-@Path("/registroCliente")
-public class RegistroCliente {
+@Path("/registroUsuario")
+public class RegistroUsuario {
     @Context
     HttpServletRequest request; 
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON) 
-    public void add(Cliente c) {
-        Cliente newClient = null; 
+    public void addUser(Usuario u) {
          try {
              cine.logic.Service service = cine.logic.Service.instance();
-             service.addCliente(c);
-             request.getSession(true).setAttribute("client", c); // cliente en sesión 
+             service.addUsuario(u);
+             request.getSession(true).setAttribute("user", u); // agregar usuario en session
              
         } catch (Exception ex) {
             throw new NotAcceptableException(); 
         }      
     }
-    
-
     
 }

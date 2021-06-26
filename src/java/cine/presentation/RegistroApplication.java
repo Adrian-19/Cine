@@ -22,8 +22,16 @@ public class RegistroApplication extends Application {
         classes.add(Peliculas.class);
         classes.add(Login.class);
         classes.add(Salas.class);
+        classes.add(RegistroCliente.class); 
+        classes.add(RegistroUsuario.class); 
+        classes.add(RegistrarProyeccion.class);
+        classes.add(VerCompras.class);
         classes.add(Compras.class);
+<<<<<<< HEAD
         classes.add(registroCliente.class);
+=======
+
+>>>>>>> 7d256ed65a6f74275e8fb15048ae444055514cdc
         return classes;
     }   
 }

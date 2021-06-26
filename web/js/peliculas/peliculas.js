@@ -27,8 +27,8 @@ function renderPelicula() {
 
 function loadPelicula() {
     pelicula = Object.fromEntries((new FormData($("#formulario-peliculas").get(0))).entries());
-    console.log("Esta es la pelicula cargada : "+pelicula.id+" "+pelicula.precio+" "+pelicula.nombre+" "+pelicula.estado); //solo para probar
-    
+//    console.log("Esta es la pelicula cargada : "+pelicula.id+" "+pelicula.precio+" "+pelicula.nombre+" "+pelicula.estado); //solo para probar
+//    
 }
 
 function resetPelicula() {
@@ -95,9 +95,10 @@ function registrarPelicula() {
         addImagen();
         fetchAndListP();
         resetPelicula();
-        $('#add-modal-peliculas').modal('hide');                
+        $('#add-modal-peliculas').modal('hide'); 
+        document.location = url + "presentation/RegistroPeliculas/registroPeliculas.html"; 
     })();     
-    console.log(listar_usuarios());//solo para probar
+    //console.log(listar_usuarios());//solo para probar
 
 }
 
@@ -148,15 +149,18 @@ function fetchAndListP(){
         const response = await fetch(request);
         if (!response.ok) {errorMessage(response.status,$("#errorDiv"));return;}
         peliculas = await response.json(); 
-        //listAllP();
         list();
-        console.log(listar_usuarios());//solo para probar
+<<<<<<< HEAD
+        //console.log(listar_usuarios());//solo para probar
+=======
+        console.log(listar_usuarios());//borrar** 
+>>>>>>> b9b0d3da32a24b04703cf2da1f23f946853d2426
     })();    
 } 
 
 function buscarPelicula(){
     var busqueda = $("#busqueda").val();
-    console.log("Se realizo la siguiente busqueda: "+busqueda);
+    //console.log("Se realizo la siguiente busqueda: "+busqueda);
     let request = new Request(url+'api/peliculas?nombre='+busqueda, {method: 'GET', headers: { }});
     (async ()=>{
         const response = await fetch(request);
@@ -164,7 +168,7 @@ function buscarPelicula(){
         peliculas = await response.json(); 
         listAllP();
         list();
-        console.log(listar_usuarios());//solo para probar
+        //console.log(listar_usuarios());//solo para probar
     })();    
 }
 

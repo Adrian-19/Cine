@@ -9,6 +9,8 @@ import cine.logic.Sala;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -51,5 +53,17 @@ public class SalaDao {
         }catch(SQLException ex){
             return null;
         }
+    }
+    
+    public List<Sala> findAll() throws Exception{
+       List<Sala> salas = new ArrayList(); 
+       String sql="select * from sala";
+       PreparedStatement stm = Database.instance().prepareStatement(sql);
+       ResultSet rs =  Database.instance().executeQuery(stm);
+       while(rs.next()) {
+                Sala c = from(rs);
+                salas.add(c);
+        }
+       return salas; 
     }
 }

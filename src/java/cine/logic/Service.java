@@ -74,17 +74,42 @@ public class Service {
         return proyeccionDao.read(idPro);
     }
     
+    public void addProyeccion(Proyeccion p){
+        try {
+            proyeccionDao.create(p); 
+            
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 
     // ------------ USUARIO -------------
     
     public Usuario getUsuario(String cedula) throws Exception{
         return usuarioDao.read(cedula);
     }
+    
+     public void addUsuario(Usuario u){
+        try {
+            usuarioDao.create(u);
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     // ------------ CLIENTE -------------
     
     public Cliente getCliente(String cedula) throws Exception{
         return clienteDao.read(cedula);
+    }
+    
+    public void addCliente(Cliente c){
+        try {
+            clienteDao.create(c);
+        } catch (Exception ex) {
+            Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     // ------------ Peliculas -------------
@@ -118,10 +143,18 @@ public class Service {
         return peliculaDao.read(id);
     }
     // ------------ Compras -------------
-        public List<Compra> getListaCompras() {
+    public List<Compra> getListaCompras() {
         List<Compra> arr =  compraDao.listAll();
         return arr;
     }
+
+    
+    public List<Compra> compraPorCliente(int id) {
+        return compraDao.compraPorCliente(id); 
+
+    }
+    
+
         
     public int registrarCompra(Compra c){
        try {
@@ -131,6 +164,7 @@ public class Service {
         }
        return 0;
     }
+
     //------------ Tiquetes -------------
     public List<Tiquete> getListaTiquetesCompra(int idCom) {
         List<Tiquete> arr =  tiqueteDao.tiquetesCompra(idCom);
@@ -153,5 +187,9 @@ public class Service {
         } catch (Exception ex) {
             Logger.getLogger(Service.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public List<Sala> findAllSalas() throws Exception{
+        return salaDao.findAll(); 
     }
 }
